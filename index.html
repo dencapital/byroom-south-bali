@@ -66,7 +66,7 @@
 <footer class="ft">
   <div class="mark">By<b>ROOM</b></div>
   <p data-i="ftNote"></p>
-  <p>byroom.world</p>
+  <p>byroom.world · <span style="opacity:.7">Place photos: Wikimedia Commons (CC BY / BY-SA / CC0)</span></p>
 </footer>
 
 <script src="assets/kit.js"></script>
@@ -111,16 +111,16 @@ const TOURS = [
 ];
 // Spa at your villa — 60 minutes (IDR)
 const SPA = [
-  {grp:"massage", id:"balinese", ic:"lotus", name:{en:"Balinese Massage",ru:"Балийский массаж"}, price:350000},
-  {grp:"massage", id:"deep", ic:"hand", name:{en:"Deep Tissue Massage",ru:"Глубокий массаж"}, price:410000},
-  {grp:"massage", id:"medical", ic:"hands", name:{en:"Medical Massage",ru:"Лечебный массаж"}, price:410000},
-  {grp:"massage", id:"slim", ic:"drop", name:{en:"Slimming Massage",ru:"Массаж для похудения"}, price:400000},
-  {grp:"massage", id:"foot", ic:"foot", name:{en:"Foot Reflexology",ru:"Рефлексология стоп"}, price:300000},
-  {grp:"beauty", id:"facial", ic:"face", name:{en:"Facial",ru:"Уход за лицом"}, price:300000},
-  {grp:"beauty", id:"scrub", ic:"bowl", name:{en:"Body Scrub",ru:"Скраб для тела"}, price:300000},
-  {grp:"beauty", id:"nails", ic:"nail", name:{en:"Manicure / Pedicure",ru:"Маникюр / педикюр"}, price:300000},
-  {grp:"mind", id:"sound", ic:"sound", name:{en:"Sound Healing Therapy",ru:"Звукотерапия"}, price:400000},
-  {grp:"mind", id:"tarot", ic:"cards", name:{en:"Tarot Reading",ru:"Расклад таро"}, price:400000}
+  {grp:"massage", id:"balinese", img:"assets/svc/spa_massage.webp", ic:"lotus", name:{en:"Balinese Massage",ru:"Балийский массаж"}, price:350000},
+  {grp:"massage", id:"deep", img:"assets/svc/spa_massage2.webp", ic:"hand", name:{en:"Deep Tissue Massage",ru:"Глубокий массаж"}, price:410000},
+  {grp:"massage", id:"medical", img:"assets/svc/spa_towel.webp", ic:"hands", name:{en:"Medical Massage",ru:"Лечебный массаж"}, price:410000},
+  {grp:"massage", id:"slim", img:"assets/svc/spa_candle.webp", ic:"drop", name:{en:"Slimming Massage",ru:"Массаж для похудения"}, price:400000},
+  {grp:"massage", id:"foot", img:"assets/svc/spa_foot.webp", ic:"foot", name:{en:"Foot Reflexology",ru:"Рефлексология стоп"}, price:300000},
+  {grp:"beauty", id:"facial", img:"assets/svc/spa_facial.webp", ic:"face", name:{en:"Facial",ru:"Уход за лицом"}, price:300000},
+  {grp:"beauty", id:"scrub", img:"assets/svc/spa_still.webp", ic:"bowl", name:{en:"Body Scrub",ru:"Скраб для тела"}, price:300000},
+  {grp:"beauty", id:"nails", img:"https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=240&auto=format&fit=crop&q=70", ic:"nail", name:{en:"Manicure / Pedicure",ru:"Маникюр / педикюр"}, price:300000},
+  {grp:"mind", id:"sound", img:"assets/svc/spa_sound.webp", ic:"sound", name:{en:"Sound Healing Therapy",ru:"Звукотерапия"}, price:400000},
+  {grp:"mind", id:"tarot", img:"assets/svc/spa_tarot.webp", ic:"cards", name:{en:"Tarot Reading",ru:"Расклад таро"}, price:400000}
 ];
 // Adventures (IDR)
 const ADV = [
@@ -135,6 +135,9 @@ const MORE_ADV = [
   {id:"penida", ic:"island", name:{en:"Nusa Penida Day Tour",ru:"Однодневный тур на Нуса-Пениду"}},
   {id:"water", ic:"wave", name:{en:"Water sports · jet ski, parasailing, banana boat",ru:"Водные развлечения · гидроцикл, парасейлинг, банан"}}
 ];
+// Photos: Wikimedia Commons, see assets/places/CREDITS.txt
+const PLACE_IMG = {"La Brisa Bali":"labrisa","Batu Bolong Beach":"batubolong","Tanah Lot Temple":"tanahlot","Love Anchor Canggu":"loveanchor","Jimbaran Bay":"jimbaran","Rock Bar Bali":"rockbar","GWK Cultural Park":"gwk","Uluwatu Temple":"uluwatu","Geger Beach":"geger","Water Blow":"waterblow","Bali Collection":"balicollection","Pandawa Beach":"pandawa","Tanjung Benoa":"benoa"};
+const pimg = n => PLACE_IMG[n] ? `assets/places/${PLACE_IMG[n]}.webp` : null;
 const PLACES = {
   canggu:[
     ["La Brisa Bali",{en:"Beach club · Sunset",ru:"Бич-клуб · Закат"},{en:"A bohemian beachfront spot with ocean views and dreamy sunsets.",ru:"Богемный бич-клуб у океана и закаты как с открытки."},"La Brisa Bali Echo Beach Canggu"],
@@ -165,15 +168,15 @@ const PLACES = {
 const T = {
  en:{
   heroK:"ByROOM · South Bali", heroH:"Welcome<br><em>home</em>", ctaExplore:"Explore services",
-  stayK:"You're staying at", concierge:"Concierge", conciergeS:"Brigita · WhatsApp", wifiS:"Tap for password",
+  stayK:"You're staying at", concierge:"Concierge", concHours:"Until 23:00", conciergeS:"Brigita · WhatsApp", wifiS:"Tap for password",
   needsK:"Concierge", needsH:"Everything for <em>your stay</em>", needsLede:"Grouped by what you need. Add anything you like — then send one request to our team on WhatsApp.",
   services:"services", seeAll:"See all", infoK:"Good to know", infoH:"Handy <em>details</em>", teamK:"Here for you", teamH:"Your <em>team</em>",
   gMove:"Arrival & getting around", gMoveS:"Airport transfer · scooters · day tours with a driver",
   gSpa:"Spa at your villa", gSpaS:"Massage, beauty & wellbeing — the therapist comes to you",
   gAdv:"Adventures", gAdvS:"ATV, buggy, rafting, cruises & islands",
-  gHome:"Home & help", gHomeS:"Housekeeping, laundry, longer stay",
+  gHome:"Home & help", gHomeS:"Free housekeeping · laundry · longer stay", free:"Free", freeS:"housekeeping is included in your stay",
   exK:"Explore nearby", exH:"Around ", exSub:"Handpicked spots near your villa. Need a ride? Add it to your request.",
-  iWifi:"Wi-Fi & address", iWifiS:"Network, password, map", iHelp:"Emergency & useful", iHelpS:"112, hospital, pharmacy", iExtend:"Extend your stay", iExtendS:"Check dates and the best rate", iHk:"Housekeeping", iHkS:"Towels, amenities, cleaning",
+  iWifi:"Wi-Fi & address", iWifiS:"Network, password, map", iHelp:"Emergency & useful", iHelpS:"112, hospital, pharmacy", iExtend:"Extend your stay", iExtendS:"Check dates and the best rate", iHk:"Housekeeping · free", iHkS:"Towels, amenities, cleaning",
   fbBadH:"Something not right?", fbBadS:"Tell us first — we'll fix it fast.", fbGoodH:"Loving it? ★", fbGoodS:"Tell us — it makes our day.",
   ftNote:"Service rates are starting prices, subject to availability and confirmation.",
   copy:"Copy", copied:"Copied", directions:"Directions", ride:"Ride", network:"Network", password:"Password", openMaps:"Open in Maps", address:"Address", wifiAsk:"Wi-Fi details for this villa come from our team — one message and they're yours.", wifiBtn:"Get Wi-Fi details",
@@ -198,15 +201,15 @@ const T = {
  },
  ru:{
   heroK:"ByROOM · Юг Бали", heroH:"Добро<br><em>пожаловать</em>", ctaExplore:"Смотреть услуги",
-  stayK:"Вы живёте на вилле", concierge:"Консьерж", conciergeS:"Brigita · WhatsApp", wifiS:"Нажмите — пароль",
+  stayK:"Вы живёте на вилле", concierge:"Консьерж", concHours:"До 23:00", conciergeS:"Brigita · WhatsApp", wifiS:"Нажмите — пароль",
   needsK:"Консьерж", needsH:"Всё для <em>вашего отдыха</em>", needsLede:"Собрали по потребностям. Добавляйте что нравится — и отправьте один запрос команде в WhatsApp.",
   services:"услуг", seeAll:"Все", infoK:"Полезно знать", infoH:"Важные <em>детали</em>", teamK:"Мы рядом", teamH:"Ваша <em>команда</em>",
   gMove:"Трансфер и передвижение", gMoveS:"Из аэропорта · скутеры · туры с водителем",
   gSpa:"Спа на вилле", gSpaS:"Массаж, красота и релакс — мастер приедет к вам",
   gAdv:"Приключения", gAdvS:"ATV, багги, рафтинг, круизы и острова",
-  gHome:"Дом и помощь", gHomeS:"Уборка, прачечная, продление",
+  gHome:"Дом и помощь", gHomeS:"Бесплатная уборка · прачечная · продление", free:"Бесплатно", freeS:"уборка входит в проживание",
   exK:"Рядом с виллой", exH:"Вокруг: ", exSub:"Проверенные места рядом с виллой. Нужна машина? Добавьте поездку в запрос.",
-  iWifi:"Wi-Fi и адрес", iWifiS:"Сеть, пароль, карта", iHelp:"Экстренное и важное", iHelpS:"112, больница, аптека", iExtend:"Продлить проживание", iExtendS:"Проверим даты и лучшую цену", iHk:"Уборка", iHkS:"Полотенца, принадлежности, уборка",
+  iWifi:"Wi-Fi и адрес", iWifiS:"Сеть, пароль, карта", iHelp:"Экстренное и важное", iHelpS:"112, больница, аптека", iExtend:"Продлить проживание", iExtendS:"Проверим даты и лучшую цену", iHk:"Уборка · бесплатно", iHkS:"Полотенца, принадлежности, уборка",
   fbBadH:"Что-то не так?", fbBadS:"Напишите нам — быстро исправим.", fbGoodH:"Всё нравится? ★", fbGoodS:"Расскажите — это лучший день для команды.",
   ftNote:"Цены услуг — стартовые, зависят от наличия и подтверждения.",
   copy:"Копировать", copied:"Скопировано", directions:"Маршрут", ride:"Поездка", network:"Сеть", password:"Пароль", openMaps:"Открыть карту", address:"Адрес", wifiAsk:"Wi-Fi этой виллы пришлёт команда — одно сообщение, и всё.", wifiBtn:"Получить Wi-Fi",
@@ -315,7 +318,7 @@ Guide.views.spa = {
   get nav(){ return [["massage", L("spMassage")], ["beauty", L("spBeauty")], ["mind", L("spMind")]]; },
   body(){
     const sec = (g, title, top) => h.sec(g, title, top ? L("spSub") : "", (top ? h.perks(L("spPerks")) + '<div style="height:10px"></div>' : "") +
-      h.rows(SPA.filter(s => s.grp === g).map(s => ({id:"spa-" + s.id, icon:s.ic, name:tr(s.name), meta:"60 min", price:fmt(s.price)}))));
+      h.rows(SPA.filter(s => s.grp === g).map(s => ({id:"spa-" + s.id, img:s.img, icon:s.ic, name:tr(s.name), meta:"60 min", price:fmt(s.price)}))));
     return sec("massage", L("spMassage"), true) + sec("beauty", L("spBeauty")) + sec("mind", L("spMind"));
   }
 };
@@ -335,7 +338,7 @@ Guide.views.home = {
   get title(){ return L("gHome"); }, get kicker(){ return V().name; }, get sub(){ return L("gHomeS"); }, get img(){ return V().photo; },
   get nav(){ return [["hk", L("hkNav")], ["laundry", L("lnNav")], ["extend", L("exNav")]]; },
   body(){
-    return h.sec("hk", L("hkNav"), L("hkSub"), `<div class="card">
+    return h.sec("hk", L("hkNav"), L("hkSub"), `<div class="card"><div class="price-b" style="margin-bottom:14px"><b>${esc(L("free"))}</b><span>· ${esc(L("freeS"))}</span></div>
         <div class="k-fields" style="margin-top:0"><label class="full">${esc(L("hkWhen"))}${h.seg("hkDay", L("hkDays").map((d, i) => [i, d[0]]), S.hkDay)}</label>
         <label class="full">${esc(L("hkTime"))}${h.seg("hkTime", L("hkTimes").map((d, i) => [i, d[0]]), S.hkTime)}</label>
         <label class="full">${esc(L("hkNote"))}<textarea class="k-in" id="hkNote" rows="2">${esc(form.hkNote || "")}</textarea></label></div>
@@ -359,7 +362,7 @@ Guide.views.stay = {
 };
 Guide.views.explore = {
   get title(){ return L("exH") + tr(AREA[V().area]); }, get kicker(){ return L("exK"); }, get sub(){ return L("exSub"); }, img:"assets/svc/tour_temple.webp",
-  body(){ return h.sec("places", tr(AREA[V().area]), "", h.places(PLACES[V().area].map(([n, tag, d, q]) => ({name:n, dist:tr(tag), note:tr(d), maps:"https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(q), addId:"ride-" + n, addLabel:L("ride")})), L)); }
+  body(){ return h.sec("places", tr(AREA[V().area]), "", h.places(PLACES[V().area].map(([n, tag, d, q]) => ({name:n, img:pimg(n), dist:tr(tag), note:tr(d), maps:"https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(q), addId:"ride-" + n, addLabel:L("ride")})), L)); }
 };
 Guide.views.help = {
   get title(){ return L("iHelp"); }, kicker:"Help", get sub(){ return L("helpSub"); }, img:"assets/svc/spa_still.webp",
@@ -383,7 +386,7 @@ function renderHome(){
     <div class="villas">${Object.entries(VILLAS).map(([k, x]) => `<button type="button" data-villa="${k}" class="${k === vKey ? "on" : ""}">${esc(x.name)}</button>`).join("")}</div>
     <div class="stay-g">
       <button type="button" data-view="stay"><span class="l">${ic("wifi")}Wi-Fi</span><span class="v">${esc(v.wifi || L("wifiBtn"))}</span><span class="s">${esc(L("wifiS"))}</span></button>
-      <a href="${waV("help")}" target="_blank" rel="noopener"><span class="l">${ic("chat")}${esc(L("concierge"))}</span><span class="v">24/7</span><span class="s">${esc(L("conciergeS"))}</span></a></div>`;
+      <a href="${waV("help")}" target="_blank" rel="noopener"><span class="l">${ic("chat")}${esc(L("concierge"))}</span><span class="v">${esc(L("concHours"))}</span><span class="s">${esc(L("conciergeS"))}</span></a></div>`;
   const tiles = [
     ["move", "gMove", "gMoveS", "assets/svc/tour_temple.webp", 3, true],
     ["spa", "gSpa", "gSpaS", "assets/svc/spa_massage.webp", SPA.length],
@@ -395,7 +398,7 @@ function renderHome(){
       <span class="go">${ic("arrow")}</span><span class="in"><span class="c">${n} ${esc(L("services"))}</span><h3>${esc(L(t))}</h3><p>${esc(L(s))}</p></span></button>`).join("");
   $("#exK").textContent = L("exK"); $("#exH").innerHTML = `${esc(L("exH"))}<em>${esc(tr(AREA[v.area]))}</em>`;
   $("#rail").innerHTML = PLACES[v.area].map(([n, tag, d], i) => `
-    <button type="button" class="pcard" data-view="explore"><div class="ph txt"><span class="tag">${esc(tr(tag))}</span>0${i + 1}</div><div class="b"><div class="t">${esc(n)}</div><div class="m">${esc(tr(d))}</div></div></button>`).join("");
+    <button type="button" class="pcard" data-view="explore"><div class="ph ${pimg(n) ? "" : "txt"}" ${pimg(n) ? `style="background-image:url('${pimg(n)}')"` : ""}><span class="tag">${esc(tr(tag))}</span>${pimg(n) ? "" : "0" + (i + 1)}</div><div class="b"><div class="t">${esc(n)}</div><div class="m">${esc(tr(d))}</div></div></button>`).join("");
   $("#infoList").innerHTML = [["wifi","iWifi","iWifiS","stay"],["home","iHk","iHkS","home"],["calendar","iExtend","iExtendS","home","extend"],["phone","iHelp","iHelpS","help"]]
     .map(([k, t, s, view, sub]) => `<button type="button" class="irow" data-view="${view}" ${sub ? `data-sub="${sub}"` : ""}><span class="ic">${ic(k)}</span><span class="b"><span class="t">${esc(L(t))}</span><br><span class="m">${esc(L(s))}</span></span><span class="ch">${ic("chev")}</span></button>`).join("");
   $("#teamList").innerHTML = L("team").map(([a, n, r, ph]) => `
