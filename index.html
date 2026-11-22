@@ -66,9 +66,11 @@
 <footer class="ft">
   <div class="mark">By<b>ROOM</b></div>
   <p data-i="ftNote"></p>
-  <p>byroom.world · <span style="opacity:.7">Place photos: Wikimedia Commons (CC BY / BY-SA / CC0)</span></p>
+  <p><span data-i="visitUs"></span> <a class="site" href="https://byroom.world" target="_blank" rel="noopener">byroom.world</a></p>
+  <div class="ig"><a href="https://www.instagram.com/byroomindonesia/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></svg><span>@byroomindonesia</span><small>Bali</small></a><a href="https://www.instagram.com/byroommc/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></svg><span>@byroommc</span><small>Thailand</small></a></div>
 </footer>
 
+<script src="assets/lang.js"></script>
 <script src="assets/kit.js"></script>
 <script src="assets/guide.js"></script>
 <script>
@@ -129,10 +131,26 @@ const ADV = [
   {id:"raft", name:"River Rafting", img:"adv_raft", desc:{en:"White water through the jungle with a guide.",ru:"Сплав по горной реке с гидом."}, per:1100000},
   {id:"tubing", name:"River Tubing", img:"adv_tubing", desc:{en:"Float, relax and enjoy the river.",ru:"Плывёшь по реке и отдыхаешь."}, per:800000}
 ];
+// Day trips (from the north price list), price "from"
+const TRIPS = [
+  {id:"batur", name:"Mount Batur Sunrise Trek", note:{en:"Pre-dawn volcano hike above the clouds",ru:"Восхождение на вулкан к рассвету над облаками"}, cost:{en:"From IDR 850K · min 2",ru:"От IDR 850K · мин. 2"}, q:"Mount Batur Kintamani"},
+  {id:"ubudtour", name:"Ubud Highlights Day Tour", img:"assets/svc/ubud-tour.jpg", note:{en:"Monkey Forest, rice terraces, temples & coffee",ru:"Лес обезьян, рисовые террасы, храмы и кофе"}, cost:{en:"From IDR 750K",ru:"От IDR 750K"}, q:"Ubud Bali"},
+  {id:"falls", name:"Waterfalls Tour", img:"https://commons.wikimedia.org/wiki/Special:FilePath/Tegenungan%20Waterfall%20sideview.jpg?width=800", note:{en:"Tegenungan & hidden jungle waterfalls",ru:"Тегенунган и скрытые водопады в джунглях"}, cost:{en:"From IDR 700K",ru:"От IDR 700K"}, q:"Tegenungan Waterfall"},
+  {id:"swing", name:"Bali Swing", img:"https://commons.wikimedia.org/wiki/Special:FilePath/Bali%20Rice%20Terrace.JPG?width=800", note:{en:"Jungle swings & nests over the valley",ru:"Качели и «гнёзда» над долиной джунглей"}, cost:{en:"From IDR 300K",ru:"От IDR 300K"}, q:"Bali Swing Tegallalang"},
+  {id:"penida", name:"Nusa Penida Day Trip", img:"https://commons.wikimedia.org/wiki/Special:FilePath/Kelingking%20Beach%20(T-Rex%20Bay)%20of%20Nusa%20Penida%2C%20Bali%20(2025)%20-%20img%2011.jpg?width=800", note:{en:"Kelingking 'T-Rex' cliff & snorkeling",ru:"Утёс «Ти-Рекс» Келингкинг и снорклинг"}, cost:{en:"From IDR 1.2M · min 2",ru:"От IDR 1.2M · мин. 2"}, q:"Nusa Penida"},
+  {id:"gili", name:"Gili Islands Trip", img:"https://commons.wikimedia.org/wiki/Special:FilePath/Gili%20Trawangan%20(16788754758).jpg?width=800", note:{en:"White-sand islands, snorkeling & turtles",ru:"Острова с белым песком, снорклинг и черепахи"}, cost:{en:"From IDR 1.5M · min 2",ru:"От IDR 1.5M · мин. 2"}, q:"Gili Islands"}
+];
+// Celebrations
+const CELEB = [
+  {id:"honeymoon", img:"assets/svc/celebrate.jpg", name:{en:"Honeymoon / Proposal Setup",ru:"Медовый месяц / предложение руки"}, price:"From IDR 500K"},
+  {id:"birthday", ic:"gift", name:{en:"Birthday / Anniversary Decor",ru:"Оформление ко дню рождения / годовщине"}, price:"From IDR 500K"},
+  {id:"bed", ic:"heart", name:{en:"Bed Decoration",ru:"Украшение кровати"}, price:"From IDR 500K"},
+  {id:"dinner", ic:"utensils", name:{en:"Romantic Dinner",ru:"Романтический ужин"}, price:"From IDR 1.5M / couple"},
+  {id:"flowers", ic:"leaf", name:{en:"Flower Bouquet",ru:"Букет цветов"}, price:"From IDR 300K"}
+];
 // Price on request
 const MORE_ADV = [
   {id:"phinisi", ic:"boat", name:{en:"Phinisi Dinner Cruise · Dance & DJ",ru:"Ужин на паруснике Phinisi · танцы и DJ"}},
-  {id:"penida", ic:"island", name:{en:"Nusa Penida Day Tour",ru:"Однодневный тур на Нуса-Пениду"}},
   {id:"water", ic:"wave", name:{en:"Water sports · jet ski, parasailing, banana boat",ru:"Водные развлечения · гидроцикл, парасейлинг, банан"}}
 ];
 // Photos: Wikimedia Commons, see assets/places/CREDITS.txt
@@ -168,12 +186,12 @@ const PLACES = {
 const T = {
  en:{
   heroK:"ByROOM · South Bali", heroH:"Welcome<br><em>home</em>", ctaExplore:"Explore services",
-  stayK:"You're staying at", concierge:"Concierge", concHours:"Until 23:00", conciergeS:"Brigita · WhatsApp", wifiS:"Tap for password",
+  stayK:"You're staying at", concierge:"Concierge", concHours:"09:00–23:00", conciergeS:"Brigita · WhatsApp", wifiS:"Tap for password",
   needsK:"Concierge", needsH:"Everything for <em>your stay</em>", needsLede:"Grouped by what you need. Add anything you like — then send one request to our team on WhatsApp.",
   services:"services", seeAll:"See all", infoK:"Good to know", infoH:"Handy <em>details</em>", teamK:"Here for you", teamH:"Your <em>team</em>",
   gMove:"Arrival & getting around", gMoveS:"Airport transfer · scooters · day tours with a driver",
   gSpa:"Spa at your villa", gSpaS:"Massage, beauty & wellbeing — the therapist comes to you",
-  gAdv:"Adventures", gAdvS:"ATV, buggy, rafting, cruises & islands",
+  gAdv:"Tours & adventures", gAdvS:"ATV, buggy, rafting, Batur sunrise, Nusa Penida", trips:"Day trips", tripsS:"Volcano sunrise, waterfalls, islands — we arrange car, guide and tickets.", fastBoat:"Fast Boat Ticket", book:"Book", gCele:"Celebrations", gCeleS:"Birthday, honeymoon & surprise setups", celeK:"Surprise someone", celeSub:"Tell us the date and the occasion — we prepare everything while you are out.", visitUs:"Visit us",
   gHome:"Home & help", gHomeS:"Free housekeeping · laundry · longer stay", free:"Free", freeS:"housekeeping is included in your stay",
   exK:"Explore nearby", exH:"Around ", exSub:"Handpicked spots near your villa. Need a ride? Add it to your request.",
   iWifi:"Wi-Fi & address", iWifiS:"Network, password, map", iHelp:"Emergency & useful", iHelpS:"112, hospital, pharmacy", iExtend:"Extend your stay", iExtendS:"Check dates and the best rate", iHk:"Housekeeping · free", iHkS:"Towels, amenities, cleaning",
@@ -201,12 +219,12 @@ const T = {
  },
  ru:{
   heroK:"ByROOM · Юг Бали", heroH:"Добро<br><em>пожаловать</em>", ctaExplore:"Смотреть услуги",
-  stayK:"Вы живёте на вилле", concierge:"Консьерж", concHours:"До 23:00", conciergeS:"Brigita · WhatsApp", wifiS:"Нажмите — пароль",
+  stayK:"Вы живёте на вилле", concierge:"Консьерж", concHours:"09:00–23:00", conciergeS:"Brigita · WhatsApp", wifiS:"Нажмите — пароль",
   needsK:"Консьерж", needsH:"Всё для <em>вашего отдыха</em>", needsLede:"Собрали по потребностям. Добавляйте что нравится — и отправьте один запрос команде в WhatsApp.",
   services:"услуг", seeAll:"Все", infoK:"Полезно знать", infoH:"Важные <em>детали</em>", teamK:"Мы рядом", teamH:"Ваша <em>команда</em>",
   gMove:"Трансфер и передвижение", gMoveS:"Из аэропорта · скутеры · туры с водителем",
   gSpa:"Спа на вилле", gSpaS:"Массаж, красота и релакс — мастер приедет к вам",
-  gAdv:"Приключения", gAdvS:"ATV, багги, рафтинг, круизы и острова",
+  gAdv:"Туры и приключения", gAdvS:"ATV, багги, рафтинг, рассвет на Батуре, Нуса-Пенида", trips:"Поездки на день", tripsS:"Рассвет на вулкане, водопады, острова — организуем машину, гида и билеты.", fastBoat:"Билет на скоростной катер", book:"Заказать", gCele:"Праздники", gCeleS:"День рождения, медовый месяц, сюрпризы", celeK:"Сделайте сюрприз", celeSub:"Напишите дату и повод — всё подготовим, пока вас нет на вилле.", visitUs:"Наш сайт",
   gHome:"Дом и помощь", gHomeS:"Бесплатная уборка · прачечная · продление", free:"Бесплатно", freeS:"уборка входит в проживание",
   exK:"Рядом с виллой", exH:"Вокруг: ", exSub:"Проверенные места рядом с виллой. Нужна машина? Добавьте поездку в запрос.",
   iWifi:"Wi-Fi и адрес", iWifiS:"Сеть, пароль, карта", iHelp:"Экстренное и важное", iHelpS:"112, больница, аптека", iExtend:"Продлить проживание", iExtendS:"Проверим даты и лучшую цену", iHk:"Уборка · бесплатно", iHkS:"Полотенца, принадлежности, уборка",
@@ -246,14 +264,15 @@ const WA_EN = { hi:"Hi Brigita! I'm staying at {v}.", help:"Hi Brigita! I'm stay
 const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
 const {esc, ic, h} = Guide; const fmt = Kit.fmt;
 let lang = "en";
-try { lang = localStorage.getItem("sbLang") || ((navigator.language || "").toLowerCase().startsWith("ru") ? "ru" : "en"); } catch(e){}
+try { lang = localStorage.getItem("sbLang2") || "en"; } catch(e){}  // English by default
+const LANGS = [["en","English","EN"],["ru","Русский","RU"],["uk","Українська","UK"],["fr","Français","FR"],["id","Bahasa Indonesia","ID"],["zh","中文","中文"],["ko","한국어","한국어"]];
 let vKey = "lula";
 const qv = new URLSearchParams(location.search).get("villa");
 try { vKey = (qv && VILLAS[qv]) ? qv : (localStorage.getItem("sbVilla") || "lula"); } catch(e){ if (qv && VILLAS[qv]) vKey = qv; }
 if (!VILLAS[vKey]) vKey = "lula";
 const V = () => VILLAS[vKey];
-const L = k => (T[lang] && T[lang][k] != null) ? T[lang][k] : T.en[k];
-const tr = v => (v && typeof v === "object" && !Array.isArray(v)) ? (v[lang] || v.en) : v;
+const L = k => (T[lang] && T[lang][k] != null) ? T[lang][k] : Guide.txDeep(lang, T.en[k]);
+const tr = v => (v && typeof v === "object" && !Array.isArray(v)) ? (v[lang] || Guide.tx(lang, v.en)) : Guide.tx(lang, v);
 const wa = (phone, msg) => Kit.wa(phone, msg);
 const waV = k => wa(GUEST, WA_EN[k].replace(/\{v\}/g, V().name));
 const unit = (n, u) => { const p = String(u).split("|"); return `${n} ${n === 1 ? p[0] : p[1]}`; };
@@ -278,6 +297,9 @@ ADV.forEach(a => Kit.item("adv-" + a.id, () => {
   const n = S["g_" + a.id]; return {t:a.name, m:`${n} guest${n > 1 ? "s" : ""}`, amt:a.per * n};
 }));
 MORE_ADV.forEach(m => Kit.item("more-" + m.id, () => ({t:m.name.en, amt:null})));
+TRIPS.forEach(x => Kit.item("trip-" + x.id, () => ({t:x.name, m:"please arrange", amt:null, lbl:x.cost.en})));
+Kit.item("fastboat", () => ({t:"Fast Boat Ticket", m:"per person", amt:null, lbl:"From IDR 550K"}));
+CELEB.forEach(x => Kit.item("cel-" + x.id, () => ({t:x.name.en, amt:null, lbl:x.price})));
 Kit.item("laundry", () => ({t:"Laundry service", amt:null, lbl:"from IDR 30,000"}));
 Object.values(PLACES).flat().forEach(p => Kit.item("ride-" + p[0], () => ({t:`Ride to ${p[0]}`, m:"from " + V().name, amt:null})));
 
@@ -292,7 +314,7 @@ Guide.views.move = {
         <div class="rr-ic">${n === S.trDest ? ic("check") : ""}</div><div class="rr-b"><div class="rr-t">${esc(n)}${n === v.dest ? `<span class="mine">${esc(L("yours"))}</span>` : ""}</div></div><div class="rr-p">${fmt(p)}</div></div>`).join("")}`).join("");
     return h.sec("transfer", L("trNav"), L("trSub"), `
         <div class="card"><div class="price-b"><span>${esc(L("from"))}</span><b>IDR 400,000</b><span>${esc(L("perCar"))}</span></div>
-          <div class="route"><div class="pt">${ic("plane")}Ngurah Rai<br>Airport</div><div class="ln"></div><div class="pt">${ic("home")}${esc(v.name)}</div></div></div>
+          <div class="route"><div class="pt">${ic("plane")}Ngurah Rai<br>DPS</div><div class="ln"></div><div class="pt">${ic("home")}${esc(v.name)}</div></div></div>
         ${h.perks(L("trPerks"))}
         <div class="rows" style="margin-top:10px">${rows}</div>
         <div class="card">${h.seg("trDir", L("trDir"), S.trDir)}
@@ -314,7 +336,7 @@ Guide.views.move = {
   }
 };
 Guide.views.spa = {
-  get title(){ return L("gSpa"); }, kicker:"Spa & wellness", get sub(){ return L("gSpaS"); }, img:"assets/svc/spa_massage.webp",
+  get title(){ return L("gSpa"); }, get kicker(){ return "ByROOM · " + tr(AREA[V().area]); }, get sub(){ return L("gSpaS"); }, img:"assets/svc/spa_massage.webp",
   get nav(){ return [["massage", L("spMassage")], ["beauty", L("spBeauty")], ["mind", L("spMind")]]; },
   body(){
     const sec = (g, title, top) => h.sec(g, title, top ? L("spSub") : "", (top ? h.perks(L("spPerks")) + '<div style="height:10px"></div>' : "") +
@@ -323,15 +345,23 @@ Guide.views.spa = {
   }
 };
 Guide.views.adv = {
-  get title(){ return L("gAdv"); }, kicker:"Bali adventures", get sub(){ return L("gAdvS"); }, img:"assets/svc/adv_raft.webp",
-  get nav(){ return [["ride", L("adMain")], ["cruise", L("adMore")]]; },
+  get title(){ return L("gAdv"); }, get kicker(){ return "ByROOM · Bali"; }, get sub(){ return L("gAdvS"); }, img:"assets/svc/adv_raft.webp",
+  get nav(){ return [["ride", L("adMain")], ["trips", L("trips")], ["cruise", L("adMore")]]; },
   body(){
     return h.sec("ride", L("adMain"), L("adSub"), h.prods(ADV.map(a => ({
         id:"adv-" + a.id, img:`assets/svc/${a.img}.webp`, cover:true, name:a.name, meta:tr(a.desc),
         extra: a.opts ? `<div class="durs" data-group="${a.id}">${a.opts.map(o => `<button type="button" data-v="${o[0]}" class="${S[a.id] === o[0] ? "on" : ""}">${esc(tr(o[2]))} · ${fmt(o[1])}</button>`).join("")}</div>${h.total("adv-" + a.id, L("total"))}`
           : `<div style="margin-top:8px">${h.step("g_" + a.id, S["g_" + a.id], 1, 12, L("guestsU"), fmt(a.per), L("perPax"))}</div>${h.total("adv-" + a.id, L("total"))}`
       })), true))
+      + h.sec("trips", L("trips"), L("tripsS"), h.places(TRIPS.map(x => ({name:x.name, img:x.img, note:tr(x.note), cost:tr(x.cost), maps:"https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(x.q), addId:"trip-" + x.id, addLabel:L("book")})), L)
+          + '<div style="height:10px"></div>' + h.rows([{id:"fastboat", icon:"boat", name:L("fastBoat"), meta:Guide.price(lang, "From IDR 550K") + " · " + L("perPax")}]))
       + h.sec("cruise", L("adMore"), L("adMoreS"), h.rows(MORE_ADV.map(m => ({id:"more-" + m.id, icon:m.ic, name:tr(m.name), meta:L("onReq")}))));
+  }
+};
+Guide.views.celebrate = {
+  get title(){ return L("gCele"); }, get kicker(){ return L("celeK"); }, get sub(){ return L("gCeleS"); }, img:"assets/svc/celebrate.jpg",
+  body(){
+    return h.sec("cele", L("gCele"), L("celeSub"), h.rows(CELEB.map(x => ({id:"cel-" + x.id, img:x.img, icon:x.ic, name:tr(x.name), meta:Guide.price(lang, x.price)}))));
   }
 };
 Guide.views.home = {
@@ -343,7 +373,7 @@ Guide.views.home = {
         <label class="full">${esc(L("hkTime"))}${h.seg("hkTime", L("hkTimes").map((d, i) => [i, d[0]]), S.hkTime)}</label>
         <label class="full">${esc(L("hkNote"))}<textarea class="k-in" id="hkNote" rows="2">${esc(form.hkNote || "")}</textarea></label></div>
         <button type="button" class="add big" id="hkSend" style="margin-top:14px">${ic("chat")} ${esc(L("hkSend"))}</button></div>`)
-      + h.sec("laundry", L("lnNav"), L("lnSub"), h.rows([{id:"laundry", icon:"shirt", name:L("lnName"), meta:"from IDR 30,000"}]))
+      + h.sec("laundry", L("lnNav"), L("lnSub"), h.rows([{id:"laundry", icon:"shirt", name:L("lnName"), meta:Guide.price(lang, "from IDR 30,000")}]))
       + h.sec("extend", L("exNav"), L("exSub"), `<a class="lbtn dark w" style="min-height:52px" target="_blank" rel="noopener" href="${waV("ext")}">${ic("calendar")} ${esc(L("exBtn"))}</a>`);
   },
   after(){ const b = $("#hkSend"); if (b) b.onclick = () => {
@@ -365,7 +395,7 @@ Guide.views.explore = {
   body(){ return h.sec("places", tr(AREA[V().area]), "", h.places(PLACES[V().area].map(([n, tag, d, q]) => ({name:n, img:pimg(n), dist:tr(tag), note:tr(d), maps:"https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(q), addId:"ride-" + n, addLabel:L("ride")})), L)); }
 };
 Guide.views.help = {
-  get title(){ return L("iHelp"); }, kicker:"Help", get sub(){ return L("helpSub"); }, img:"assets/svc/spa_still.webp",
+  get title(){ return L("iHelp"); }, get kicker(){ return V().name; }, get sub(){ return L("helpSub"); }, img:"assets/svc/spa_still.webp",
   body(){ const v = V(); return h.sec("useful", L("iHelp"), "", `<div class="ilist">${L("useful").map(([k, t, m, href]) => {
       const u = href === "VMAP" ? v.map : href === "PHARM" ? "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("pharmacy near " + v.address) : href;
       return `<a class="irow" href="${u}" ${u.startsWith("http") ? 'target="_blank" rel="noopener"' : ""}><span class="ic">${ic(k)}</span><span class="b"><span class="t">${esc(t)}</span><br><span class="m">${esc(m)}</span></span><span class="ch">${ic("chev")}</span></a>`; }).join("")}</div>`); }
@@ -377,7 +407,7 @@ function renderHome(){
   document.documentElement.lang = lang;
   $$("[data-i]").forEach(el => el.textContent = L(el.dataset.i));
   $$("[data-ih]").forEach(el => el.innerHTML = L(el.dataset.ih));
-  $("#langs").innerHTML = [["en","EN"],["ru","RU"]].map(([c, l]) => `<button type="button" data-lang="${c}" class="${c === lang ? "on" : ""}">${l}</button>`).join("");
+  Guide.langMenu($("#langs"), LANGS, lang, code => { lang = code; try { localStorage.setItem("sbLang2", lang); } catch(_){} renderHome(); Guide.repaint(); dyn(); });
   $("#heroSub").textContent = `${v.name} · ${tr(AREA[v.area])}`;
   $("#stayCard").innerHTML = `
     <div class="stay-h"><div class="stay-ph" style="background-image:url('${v.photo}')"></div>
@@ -390,8 +420,9 @@ function renderHome(){
   const tiles = [
     ["move", "gMove", "gMoveS", "assets/svc/tour_temple.webp", 3, true],
     ["spa", "gSpa", "gSpaS", "assets/svc/spa_massage.webp", SPA.length],
-    ["adv", "gAdv", "gAdvS", "assets/svc/adv_raft.webp", ADV.length + MORE_ADV.length],
-    ["home", "gHome", "gHomeS", v.photo, 3, "wide"]
+    ["adv", "gAdv", "gAdvS", "assets/svc/adv_raft.webp", ADV.length + TRIPS.length + 1 + MORE_ADV.length],
+    ["celebrate", "gCele", "gCeleS", "assets/svc/celebrate.jpg", CELEB.length],
+    ["home", "gHome", "gHomeS", v.photo, 3]
   ];
   $("#bento").innerHTML = tiles.map(([id, t, s, img, n, big]) => `
     <button type="button" class="tile rv ${big === true ? "big" : big || ""}" data-view="${id}" style="background-image:url('${img}')"><span class="bg"></span>
@@ -416,7 +447,6 @@ function dyn(){
 /* ---------- events ---------- */
 document.addEventListener("click", e => {
   const lb = e.target.closest("#langs button");
-  if (lb){ lang = lb.dataset.lang; try { localStorage.setItem("sbLang", lang); } catch(_){} renderHome(); Guide.repaint(); dyn(); return; }
   const vb = e.target.closest("[data-villa]");
   if (vb){ vKey = vb.dataset.villa; S.trDest = null; try { localStorage.setItem("sbVilla", vKey); history.replaceState(null, "", "?villa=" + vKey + location.hash); } catch(_){} renderHome(); Kit.refreshAll(); return; }
   const row = e.target.closest(".rr.pick[data-dest]");
@@ -428,7 +458,7 @@ document.addEventListener("kstep", e => { S[e.detail.name] = e.detail.value; dyn
 document.addEventListener("input", e => { if (/^tr/.test(e.target.id)) dyn(); });
 
 /* ---------- boot ---------- */
-Kit.init({ L:k => (T[lang] && T[lang][k]) || k, phone:GUEST, villa:() => V().name, chatHref:() => waV("help"), roomField:false });
+Kit.init({ lang:() => lang, L:k => (T[lang] && T[lang][k]) || k, phone:GUEST, villa:() => V().name, chatHref:() => waV("help"), roomField:false });
 Guide.setup({ L, afterRender:dyn });
 Kit.mountDock();
 renderHome();
