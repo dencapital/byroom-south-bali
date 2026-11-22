@@ -1,63 +1,437 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f7f5f0"><title>ByROOM | South Bali Guest Portal</title><style>
-:root{--gold:#ad8c50;--ink:#252824;--muted:#777b75;--cream:#f7f5f0;--line:#e8e3d8}*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}a{color:inherit;text-decoration:none}button,select{font:inherit}button{cursor:pointer}.shell{max-width:1100px;margin:auto;padding:0 22px}.hero{min-height:390px;position:relative;background:linear-gradient(90deg,rgba(14,25,20,.78),rgba(14,25,20,.23)),url('assets/lula.jpg') center/cover;color:white}.top{display:flex;justify-content:space-between;align-items:center;padding-top:24px}.brand{font-size:27px;font-weight:750;letter-spacing:.06em}.brand b{color:#d8b777}.brand small{display:block;font-size:9px;letter-spacing:.23em;font-weight:500;color:#e2cfa7}.top a{border:1px solid #ffffff70;border-radius:30px;padding:11px 17px;font-size:12px}.hero-content{padding-top:75px;padding-bottom:70px}.eyebrow{font-size:11px;letter-spacing:.23em;text-transform:uppercase;color:#e8d4ad;font-weight:700}.hero h1{font-family:Georgia,serif;font-weight:400;font-size:clamp(39px,6vw,70px);line-height:1.06;margin:14px 0}.hero p{max-width:520px;line-height:1.7;color:#f0eee9}.section{padding:50px 0 5px}.section h2{font-family:Georgia,serif;font-size:35px;font-weight:400;margin:9px 0 13px}.section .intro{color:var(--muted);font-size:14px;line-height:1.7;margin-bottom:25px}.property-photo{position:relative;overflow:hidden;border-radius:16px;margin:0 0 20px;background:#eee}.property-photo img{width:100%;height:330px;object-fit:cover;display:block;transition:opacity .2s}.property-photo .photo-caption{position:absolute;bottom:0;left:0;right:0;padding:35px 20px 17px;color:white;background:linear-gradient(transparent,#0009);font-family:Georgia,serif;font-size:25px}.property-photo[hidden]{display:none}.villa-box{background:white;border:1px solid var(--line);padding:26px;border-radius:18px;box-shadow:0 8px 28px #282b2310}.villa-box select{width:100%;background:#faf9f6;border:1px solid #ded9cf;border-radius:10px;padding:16px;color:var(--ink);margin:7px 0 22px}.label{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);font-weight:800}.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.info{background:#f9f8f5;padding:19px;border-radius:12px;min-height:100px}.info strong{display:block;margin:8px 0;font-size:16px;overflow-wrap:anywhere}.info p{margin:8px 0;color:#636961;font-size:13px;line-height:1.6}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:8px;background:var(--gold);color:white;font-size:13px;font-weight:650;padding:13px 18px}.btn.outline{background:transparent;color:var(--gold);border:1px solid #c9b890}.btn.dark{background:#27372e}.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.card{background:#fff;border:1px solid var(--line);border-radius:15px;overflow:hidden;display:flex;flex-direction:column}.card img{width:100%;height:185px;object-fit:cover;background:#dedbd4}.card .body{padding:19px;display:flex;flex:1;flex-direction:column}.card h3{font-family:Georgia,serif;font-size:23px;font-weight:400;margin:0 0 9px}.card p{font-size:13px;line-height:1.65;color:var(--muted);margin:0 0 15px;flex:1}.price{color:var(--gold);font-weight:750;font-size:14px;margin-bottom:15px}.card .btn{width:100%}.team{display:grid;grid-template-columns:1fr 1fr;gap:18px}.person{background:white;border:1px solid var(--line);border-radius:14px;padding:24px;display:flex;gap:17px;align-items:center}.avatar{background:#eee8dc;color:var(--gold);height:54px;width:54px;border-radius:50%;display:grid;place-items:center;font-family:Georgia,serif;font-size:24px}.person h3{margin:0 0 5px;font-family:Georgia,serif;font-size:23px;font-weight:400}.person p{margin:0 0 12px;color:var(--muted);font-size:12px}.person a{font-size:12px;font-weight:700;color:#337451}.footer{text-align:center;padding:50px 20px 90px;color:var(--muted);font-size:12px}.floating{position:fixed;bottom:18px;right:18px;z-index:10;background:#2b8057;color:white;padding:13px 17px;border-radius:40px;font-size:13px;font-weight:750;box-shadow:0 7px 25px #0003}.note{font-size:11px;color:var(--muted);margin-top:13px} @media(max-width:760px){.hero{min-height:370px}.hero-content{padding-top:66px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.card img{height:150px}.team{grid-template-columns:1fr}}@media(max-width:520px){.shell{padding:0 16px}.section{padding-top:38px}.section h2{font-size:31px}.property-photo{position:relative;overflow:hidden;border-radius:16px;margin:0 0 20px;background:#eee}.property-photo img{width:100%;height:330px;object-fit:cover;display:block;transition:opacity .2s}.property-photo .photo-caption{position:absolute;bottom:0;left:0;right:0;padding:35px 20px 17px;color:white;background:linear-gradient(transparent,#0009);font-family:Georgia,serif;font-size:25px}.property-photo[hidden]{display:none}.villa-box{padding:17px}.info-grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.card img{height:205px}.top a{font-size:11px;padding:10px}.hero h1{font-size:45px}.floating{bottom:12px;right:12px}}
-.places-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.place-area{color:var(--gold);font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase}.place-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}.place-actions a{font-size:12px;padding:10px 12px;text-decoration:none;border-radius:8px;background:#272d29;color:white}.place-actions a.secondary{background:#f2eee6;color:#343b35}.empty-places{background:white;padding:22px;border-radius:14px;border:1px solid var(--line)}
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0F1F19">
+<title>ByROOM · South Bali Guest Guide</title>
+<meta name="description" content="Your villa concierge in South Bali: Wi-Fi, airport transfers, bikes, spa at your villa, adventures and day tours — booked with the ByROOM team on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/guide.css">
+</head>
+<body>
 
-/* Mobile-first guest browsing improvements */
-html{scroll-behavior:smooth}body{overflow-x:hidden}.btn,.place-actions a,select{min-height:44px}.card.no-photo{background:linear-gradient(145deg,#f2ebdd,#ffffff)}.card.no-photo:before{content:'EXPLORE BALI · LOCAL FAVOURITE';display:block;min-height:125px;padding:25px 18px;background:linear-gradient(135deg,#34483d,#8d9c82);color:#fff;letter-spacing:.18em;font-size:11px;font-weight:700;align-content:center}.card img{aspect-ratio:4/3;object-fit:cover}.place-actions a{display:inline-flex;align-items:center;justify-content:center}.place-actions a:focus-visible,.btn:focus-visible{outline:3px solid #a98442;outline-offset:3px}
-@media(max-width:760px){.hero{min-height:320px}.hero-content{padding-top:48px;padding-bottom:46px}.section{padding-top:32px}.cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.card .body{padding:15px}.card h3{font-size:20px}.card img{height:175px}.property-photo img{height:270px}.floating{font-size:12px;bottom:max(12px,env(safe-area-inset-bottom));right:12px}}
-@media(max-width:560px){.shell{padding-left:16px;padding-right:16px}.cards{grid-template-columns:1fr;gap:16px}.card img{height:auto;aspect-ratio:16/10}.card .body{padding:19px}.card h3{font-size:23px}.place-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.place-actions a{padding:12px 6px;text-align:center;font-size:12px}.hero h1{font-size:clamp(37px,10vw,48px)}.hero{min-height:320px}.top{padding-top:18px}.top .brand{font-size:22px}.top a{font-size:10px}.property-photo img{height:225px}.section h2{font-size:30px}.floating{padding:12px 15px}.footer{padding-bottom:100px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-.places-list{display:grid;grid-template-columns:1fr 1fr;gap:14px}.place-row{background:#fff;border:1px solid var(--line);border-radius:15px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;gap:12px}.place-copy h3,.guest-action h3{font-family:Georgia,serif;font-size:23px;font-weight:400;margin:0 0 9px}.place-copy p,.guest-action p{color:var(--muted);font-size:13px;line-height:1.7;margin:0}.place-row .price{margin-bottom:10px}.guest-action{background:white;border:1px solid var(--line);border-radius:16px;padding:24px;display:flex;align-items:center;justify-content:space-between;gap:22px}.guest-action>div{max-width:590px}.guest-action .btn{flex-shrink:0;text-align:center}.guest-action p{margin-top:8px}@media(max-width:760px){.places-list{grid-template-columns:1fr}.guest-action{flex-direction:column;align-items:stretch}.guest-action .btn{width:100%}}@media(max-width:560px){.place-row{padding:19px}.place-actions{display:grid;grid-template-columns:1fr 1fr}.place-actions a{min-height:46px}.guest-action{padding:19px}}</style></head><body><header class="hero"><div class="shell"><div class="top"><div class="brand">By<b>ROOM</b><small>PROPERTY MANAGEMENT COMPANY</small></div><a href="#team">YOUR TEAM ↗</a></div><div class="hero-content"><div class="eyebrow">South Bali · Guest Experience</div><h1>Welcome to<br>your Bali home.</h1><p>Everything you need for a seamless stay, thoughtful local experiences, and a little extra comfort — all in one place.</p><a class="btn" href="#villa">Explore your stay ↓</a></div></div></header><main class="shell"><section class="section" id="villa"><div class="eyebrow">01 / YOUR STAY</div><h2>Find your villa</h2><p class="intro">Choose your property to view its address, Wi-Fi details and directions.</p><div class="villa-box"><label class="label" for="villaSelect">Select your villa</label><select id="villaSelect"><option value="lula">Lula Canggu</option><option value="sacral">Sacral Canggu</option><option value="victoria">Victoria Jimbaran</option><option value="victoria2">Victoria Dua</option><option value="e2">E2 Elora</option></select><div class="property-photo" id="propertyPhoto"><img id="propertyImage" src="assets/lula.jpg" alt="Lula Canggu villa and pool"><div class="photo-caption" id="propertyCaption">Lula Canggu</div></div><div class="info-grid"><div class="info"><div class="label">Villa address</div><strong id="address"></strong><p id="place"></p></div><div class="info"><div class="label">Wi-Fi connection</div><strong id="wifi"></strong><p id="password"></p></div></div><div class="btns"><a id="maps" class="btn" href="#" target="_blank" rel="noopener noreferrer">↗ Open Google Maps</a><a id="wifiHelp" class="btn outline" target="_blank" rel="noopener noreferrer">Ask our team</a></div><p class="note">For security, access codes are provided privately by our team, not on this public page.</p></div></section><section class="section" id="services"><div class="eyebrow">02 / MAKE IT SPECIAL</div><h2>Services for your stay</h2><p class="intro">A little more comfort, a little more adventure. Tap any service to inquire directly via WhatsApp.</p><div class="cards" id="serviceCards"></div></section><section class="section" id="activities"><div class="eyebrow">03 / DISCOVER BALI</div><h2>Experiences & activities</h2><p class="intro">Make the most of your time in Bali. Our team can help arrange memorable activities based on your preferences and availability.</p><div class="cards" id="activityCards"></div></section><section class="section" id="places"><div class="eyebrow">04 / EXPLORE NEARBY</div><div class="places-head"><h2>Places to Go</h2><span class="place-area" id="placeArea">Canggu favourites</span></div><p class="intro">Handpicked places to discover around your villa. Need a ride? Our team is happy to help arrange one.</p><div class="places-list" id="placeCards"></div></section><section class="section" id="housekeeping"><div class="eyebrow">05 / COMFORT & CARE</div><h2>Housekeeping</h2><p class="intro">Need fresh towels, extra amenities, or help with cleaning during your stay? Our team is happy to assist. Housekeeping schedules and availability vary by villa.</p><div class="guest-action"><div><h3>Need a little refresh?</h3><p>Let us know what you need and your preferred time. We’ll confirm the arrangements with our on-site team.</p></div><a class="btn dark" id="housekeepingLink" target="_blank" rel="noopener noreferrer">Request Housekeeping ↗</a></div></section><section class="section" id="extension"><div class="eyebrow">06 / STAY A LITTLE LONGER</div><h2>Extending your stay?</h2><p class="intro">Not ready to leave Bali yet? We would love to welcome you for a few more nights.</p><div class="guest-action"><div><h3>Make more memories with us</h3><p>Ask our Guest Relations team about extending your reservation. We’ll check availability and share the best available options.</p></div><a class="btn" id="extendLink" target="_blank" rel="noopener noreferrer">Check Extension Availability ↗</a></div></section><section class="section" id="feedback"><div class="eyebrow">07 / YOUR EXPERIENCE</div><h2>How was your stay?</h2><p class="intro">Your comfort means so much to us. Whether everything was perfect or there is something we could improve, we would love to hear from you.</p><div class="guest-action"><div><h3>We’re here to listen ♡</h3><p>Share your experience directly with Brigita. If anything needs attention, we would love the chance to make it right.</p></div><a class="btn dark" id="feedbackLink" target="_blank" rel="noopener noreferrer">Share Your Feedback ↗</a></div></section><section class="section" id="team"><div class="eyebrow">08 / HERE FOR YOU</div><h2>Your team</h2><p class="intro">Need anything? We are just a message away.</p><div class="team"><div class="person"><div class="avatar">B</div><div><h3>Brigita</h3><p>Guest Relations</p><a id="brigita" target="_blank" rel="noopener noreferrer">Chat on WhatsApp ↗</a></div></div><div class="person"><div class="avatar">I</div><div><h3>Ika</h3><p>Property Manager</p><a id="ika" target="_blank" rel="noopener noreferrer">Chat on WhatsApp ↗</a></div></div></div></section></main><footer class="footer"><div class="brand" style="color:#252824">By<b>ROOM</b><small style="color:#ad8c50">PROPERTY MANAGEMENT COMPANY</small></div><p>Made for a beautiful Bali stay. We are happy to help. ♡</p><p>Service rates are starting prices and subject to availability and confirmation.</p></footer><a class="floating" id="floating" target="_blank" rel="noopener noreferrer">✆ Chat with us</a><script>
-const guest='6282339608384',manager='6281934302177';const villas={lula:{name:'Lula Canggu',address:'Gang Pondok Asri, Kuta Utara, Bali 80361, Indonesia',map:'https://maps.app.goo.gl/A4yZALVXh4LRxc1v5',wifi:'Villa Lula',pass:'lulabali',photo:'assets/lula.jpg'},sacral:{name:'Sacral Canggu',address:'Jl. Tanah Barak No.39, Canggu, Kec. Kuta Utara, Kabupaten Badung, Bali 80351, Indonesia',map:'https://maps.app.goo.gl/jCHxRuAAAyR7nARh8',wifi:'VillaSacral',pass:'12345678',photo:'assets/sacral.jpg'},victoria:{name:'Victoria Jimbaran',address:'Jalan Goa Gong No.80, South Kuta, Bali 80361, Indonesia',map:'https://maps.app.goo.gl/dFwLeaLP197AnCuG7?g_st=ic',photo:'assets/victoria.jpg'},victoria2:{name:'Victoria Dua',address:'Jl. Raya Tiara Nusa No.80, Jimbaran, Kec. Kuta Sel., Kabupaten Badung, Bali 80361, Indonesia',map:'https://maps.app.goo.gl/dFwLeaLP197AnCuG7?g_st=ic',photo:'assets/victoria2.jpg'},e2:{name:'E2 Elora',address:'Benoa, Badung Regency, Bali, Kuta Selatan, Bali 80361, Indonesia',map:'https://maps.app.goo.gl/cUkA7rsWHBZdD1zq7',wifi:'Elara Villa',pass:'vladimir2023',photo:'assets/e2.jpg'}};
-const wa=(number,msg)=>'https://wa.me/'+number+'?text='+encodeURIComponent(msg);const selected=()=>villas[document.getElementById('villaSelect').value];function renderVilla(){const v=selected();const photo=document.getElementById('propertyPhoto');photo.hidden=!v.photo;if(v.photo){document.getElementById('propertyImage').src=v.photo;document.getElementById('propertyImage').alt=v.name+' villa photo';document.getElementById('propertyCaption').textContent=v.name;}document.querySelector('.hero').style.backgroundImage=`linear-gradient(90deg,rgba(14,25,20,.78),rgba(14,25,20,.23)),url('${v.photo||'assets/lula.jpg'}')`;document.getElementById('address').textContent=v.name;document.getElementById('place').textContent=v.address;document.getElementById('wifi').textContent=v.wifi||'Contact our team';document.getElementById('password').textContent=v.pass?'Password: '+v.pass:'Wi-Fi details available on request';document.getElementById('maps').href=v.map;document.getElementById('wifiHelp').href=wa(guest,'Hi Brigita, I am staying at '+v.name+'. Could you help me with the Wi-Fi details?');document.getElementById('floating').href=wa(guest,'Hi Brigita, I am staying at '+v.name+'. Could you help me?');document.getElementById('brigita').href=wa(guest,'Hi Brigita, I am staying at '+v.name+' and would like some assistance.');document.getElementById('ika').href=wa(manager,'Hi Ika, I am staying at '+v.name+' and would like some assistance.');document.getElementById('housekeepingLink').href=wa(guest,'Hi Brigita! I am staying at '+v.name+'. Could you help arrange housekeeping? My preferred time is: ');document.getElementById('extendLink').href=wa(guest,'Hi Brigita! I am staying at '+v.name+' and would like to extend my stay. Could you check availability and rates?');document.getElementById('feedbackLink').href=wa(guest,'Hi Brigita! I am staying at '+v.name+' and would like to share feedback about my stay: ');document.querySelectorAll('[data-service]').forEach(a=>a.href=wa(guest,'Hi Brigita! I am staying at '+v.name+' and would like to ask about '+a.dataset.service+'.'));renderPlaces();}document.getElementById('villaSelect').addEventListener('change',renderVilla);
-const services=[['Private Airport Transfer','From IDR 400,000','A comfortable private car and driver for your arrival or departure.','photo-1449965408869-eaa3f722e40d'],['Private Day Tour · 12 Hours','From IDR 900,000','Discover Bali with a private car and driver, at your own pace.','photo-1537996194471-e657df975ab4'],['Scooter Rental','From IDR 120,000','Enjoy the freedom to explore the island on two wheels.','photo-1558981806-ec527fa84c39'],['In-Villa Massage','From IDR 350,000','Relax, reset and unwind with a massage during your stay.','photo-1540555700478-4be289fbecef'],['Manicure & Pedicure','From IDR 300,000','A little extra self-care, arranged for your convenience.','photo-1632345031435-8727f6897d53'],['Laundry Service','From IDR 30,000','Keep everything fresh and easy throughout your stay.','photo-1517677208171-0bc6725a3e60']];const activities=[['Phinisi Dinner Cruise, Dance & DJ','An evening on the water with dining, entertainment, dancing and a DJ.','photo-1544551763-46a013bb70d5'],['Ubud ATV Adventure','Ride an ATV through scenic jungle trails and muddy tracks around Ubud.','photo-1558981806-ec527fa84c39'],['Ubud White Water Rafting','Paddle through beautiful river scenery with an experienced guide.','photo-1500530855697-b586d89ba3ee'],['Nusa Penida Day Tour','Explore dramatic coastal viewpoints and beautiful beaches on a day trip.','photo-1537996194471-e657df975ab4'],['Bali Water Sports','Ask about jet skiing, parasailing, banana boats and other water activities.','photo-1507525428034-b723cf961d3e']];const photoOverrides={"Scooter Rental": "https://bikehouse-assets.sgp1.cdn.digitaloceanspaces.com/gallery/409/IMG_0826.jpg", "Phinisi Dinner Cruise, Dance & DJ": "https://phinisicruise.com/img-gallery/20250210000217-1-242.jpg", "Ubud ATV Adventure": "https://www.shouf.io/cdn/shop/files/ubud-atv-adventure-tirta-empul-temple-and-tibumana-waterfall-tour-3586195.webp?v=1761759299", "Ubud White Water Rafting": "https://cdn.getyourguide.com/img/tour/591c5ee65ad48.jpeg/155.jpg", "Nusa Penida Day Tour": "https://ik.imagekit.io/tvlk/blog/2024/08/bqbUWAmR-image.jpeg?tr=q-70%2Cc-at_max%2Cw-500%2Ch-300%2Cdpr-2", "Bali Water Sports": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/32/6b/48/b4/a-vibrant-beach-scene.jpg?h=900&s=1&w=1200"};function card(item,activity=false){const [title,a,b,c]=activity?[item[0],item[1],'Ask our team for availability and pricing.',item[2]]:item;const el=document.createElement('article');el.className='card';const img=document.createElement('img');img.src=photoOverrides[title]||('https://images.unsplash.com/'+c+'?w=650&auto=format&fit=crop&q=75');img.alt=title;img.loading='lazy';const body=document.createElement('div');body.className='body';const h=document.createElement('h3');h.textContent=title;const p=document.createElement('p');p.textContent=activity?a:b;const price=document.createElement('div');price.className='price';price.textContent=activity?'Price on request':a;const link=document.createElement('a');link.className='btn dark';link.textContent=activity?'Ask about activity ↗':'Book via WhatsApp ↗';link.dataset.service=title;link.target='_blank';link.rel='noopener noreferrer';body.append(h,p,price,link);el.append(img,body);return el;}services.forEach(x=>document.getElementById('serviceCards').append(card(x)));activities.forEach(x=>document.getElementById('activityCards').append(card(x,true)));
-const verifiedPlacePhotos={
- 'La Brisa Bali':'https://hellocanggu.com/uploads/Blog---best-beach-bars-in-canggu-for-sunset-view-/La-Brisa-/302333209_756730758965080_525263288292163840_n.jpg',
- 'Rock Bar Bali':'https://ak-d.tripcdn.com/images/1mi06224x8wycmavvCEE5_Q90.jpg?proc=source%2Ftrip',
- 'Water Blow':'https://d2sx1calt21doo.cloudfront.net/xxt/experience/image/waterblow-2-jpg-1080x720-FIT-bf27405fd0c61fb7ae9b1eab84f70373.jpeg'
+<header class="hero" id="top">
+  <div class="poster"></div>
+  <video muted loop playsinline autoplay preload="auto" aria-hidden="true"></video>
+  <div class="hero-top">
+    <a class="logo" href="#top" aria-label="ByROOM">
+      <svg viewBox="0 0 72 72" aria-hidden="true"><path d="M36 8 L60 28 L60 60 L12 60 L12 28 Z" fill="none" stroke="#E9D3A4" stroke-width="4" stroke-linejoin="round"/><path d="M30 38 L38 46 L30 54 L22 46 Z" fill="#E9D3A4"/></svg>
+      <span>ByROOM<small>South Bali</small></span></a>
+    <div class="langs" id="langs"></div>
+  </div>
+  <div class="hero-in">
+    <p class="hero-k" data-i="heroK"></p>
+    <h1 data-ih="heroH"></h1>
+    <p class="hero-sub" id="heroSub"></p>
+    <div class="hero-cta">
+      <a class="hbtn solid" href="#needs"><span data-i="ctaExplore"></span></a>
+      <button type="button" class="hbtn ghost" data-view="stay"><svg viewBox="0 0 24 24"><path d="M3 9a15 15 0 0 1 18 0M6 12.5a10 10 0 0 1 12 0M9 16a5 5 0 0 1 6 0"/></svg>Wi-Fi</button>
+    </div>
+  </div>
+  <div class="hero-cue" aria-hidden="true"></div>
+</header>
+
+<div class="stay"><div class="stay-c" id="stayCard"></div></div>
+
+<main class="wrap">
+  <section class="sec" id="needs">
+    <div class="sec-h rv"><div><p class="k" data-i="needsK"></p><h2 data-ih="needsH"></h2></div></div>
+    <p class="lede rv" data-i="needsLede"></p>
+    <div class="bento" id="bento"></div>
+  </section>
+
+  <section class="sec" id="explore">
+    <div class="sec-h rv"><div><p class="k" id="exK"></p><h2 id="exH"></h2></div><button type="button" data-view="explore"><span data-i="seeAll"></span> →</button></div>
+    <div class="rail" id="rail"></div>
+  </section>
+
+  <section class="sec" id="info">
+    <div class="sec-h rv"><div><p class="k" data-i="infoK"></p><h2 data-ih="infoH"></h2></div></div>
+    <div class="ilist rv" id="infoList"></div>
+  </section>
+
+  <section class="sec" id="team">
+    <div class="sec-h rv"><div><p class="k" data-i="teamK"></p><h2 data-ih="teamH"></h2></div></div>
+    <div class="team rv" id="teamList"></div>
+    <div class="fb rv">
+      <a class="bad" id="fbBad" target="_blank" rel="noopener"><div class="h" data-i="fbBadH"></div><div class="s" data-i="fbBadS"></div></a>
+      <a class="good" id="fbGood" target="_blank" rel="noopener"><div class="h" data-i="fbGoodH"></div><div class="s" data-i="fbGoodS"></div></a>
+    </div>
+  </section>
+</main>
+
+<footer class="ft">
+  <div class="mark">By<b>ROOM</b></div>
+  <p data-i="ftNote"></p>
+  <p>byroom.world</p>
+</footer>
+
+<script src="assets/kit.js"></script>
+<script src="assets/guide.js"></script>
+<script>
+/* ============================================================
+   ✏️  EDIT HERE — villas, prices, contacts. Phone: digits only.
+   ============================================================ */
+const GUEST = "6282339608384";   // Brigita · Guest Relations (WhatsApp)
+const MANAGER = "6281934302177"; // Ika · Property Manager
+
+const VILLAS = {
+  lula:{name:"Lula Canggu", area:"canggu", dest:"Canggu", address:"Gang Pondok Asri, Kuta Utara, Bali 80361", map:"https://maps.app.goo.gl/A4yZALVXh4LRxc1v5", wifi:"Villa Lula", pass:"lulabali", photo:"assets/lula.jpg"},
+  sacral:{name:"Sacral Canggu", area:"canggu", dest:"Canggu", address:"Jl. Tanah Barak No.39, Canggu, Kuta Utara, Badung, Bali 80351", map:"https://maps.app.goo.gl/jCHxRuAAAyR7nARh8", wifi:"VillaSacral", pass:"12345678", photo:"assets/sacral.jpg"},
+  victoria:{name:"Victoria Jimbaran", area:"jimbaran", dest:"Jimbaran", address:"Jalan Goa Gong No.80, South Kuta, Bali 80361", map:"https://maps.app.goo.gl/dFwLeaLP197AnCuG7", photo:"assets/victoria.jpg"},
+  victoria2:{name:"Victoria Dua", area:"jimbaran", dest:"Jimbaran", address:"Jl. Raya Tiara Nusa No.80, Jimbaran, Kuta Selatan, Badung, Bali 80361", map:"https://maps.app.goo.gl/dFwLeaLP197AnCuG7", photo:"assets/victoria2.jpg"},
+  e2:{name:"E2 Elora", area:"nusadua", dest:"Nusa Dua", address:"Benoa, Kuta Selatan, Badung, Bali 80361", map:"https://maps.app.goo.gl/cUkA7rsWHBZdD1zq7", wifi:"Elara Villa", pass:"vladimir2023", photo:"assets/e2.jpg"}
 };
-const places={
- canggu:[
- ['La Brisa Bali','Beach Club · Sunset','A dreamy beachfront escape with bohemian vibes, ocean views and beautiful sunsets.','La Brisa Bali Echo Beach Canggu Bali','photo-1507525428034-b723cf961d3e'],
- ['Batu Bolong Beach','Beach · Sunset','Enjoy Canggu’s laid-back beach atmosphere, watch surfers and catch golden hour.','Batu Bolong Beach Canggu Bali','photo-1507525428034-b723cf961d3e'],
- ['FINNS Beach Club','Beach Club · Entertainment','Spend the day by the pool with beachfront dining, music and a lively atmosphere.','FINNS Beach Club Berawa Bali','photo-1530549387789-4c1017266635'],
- ['Tanah Lot Temple','Culture · Sunset · Short Trip','Visit an iconic sea temple surrounded by dramatic ocean views.','Tanah Lot Temple Tabanan Bali','photo-1537996194471-e657df975ab4'],
- ['Love Anchor Canggu','Shopping · Local Market','Explore Bali-inspired fashion, accessories, souvenirs and local finds.','Love Anchor Canggu Bali','photo-1476514525535-07fb3b4ae5f1']
- ],
- jimbaran:[
- ['Jimbaran Bay','Beach · Seafood · Sunset','Enjoy a beachfront seafood dinner while watching the sunset over the ocean.','Jimbaran Bay Bali','photo-1507525428034-b723cf961d3e'],
- ['Rock Bar Bali','Cliffside Bar · Sunset','Enjoy oceanfront drinks at the spectacular cliffside bar at AYANA.','Rock Bar AYANA Jimbaran Bali','photo-1514933651103-005eec06c04b'],
- ['GWK Cultural Park','Culture · Landmark','Discover Bali’s monumental cultural landmark and traditional performances.','Garuda Wisnu Kencana Cultural Park Bali','photo-1537996194471-e657df975ab4'],
- ['Samasta Lifestyle Village','Dining · Shopping','A relaxed open-air destination for restaurants, cafés and boutique shopping.','Samasta Lifestyle Village Jimbaran Bali','photo-1517248135467-4c7edcad34c4'],
- ['Uluwatu Temple','Culture · Sunset · Short Trip','Experience a dramatic cliffside temple and the famous Kecak dance.','Uluwatu Temple Pecatu Bali','photo-1537996194471-e657df975ab4']
- ],
- nusadua:[
- ['Geger Beach','Beach · Relaxation','Unwind on soft sand beside the beautiful turquoise waters of Nusa Dua.','Geger Beach Nusa Dua Bali','photo-1507525428034-b723cf961d3e'],
- ['Water Blow','Nature · Scenic Viewpoint','Watch powerful ocean waves crash against natural rock formations.','Water Blow Nusa Dua Bali','photo-1518837695005-2083093ee35b'],
- ['Bali Collection','Shopping · Dining','Discover boutiques, restaurants and cafés in a tropical outdoor setting.','Bali Collection Nusa Dua Bali','photo-1476514525535-07fb3b4ae5f1'],
- ['Pandawa Beach','Beach · Short Trip','Explore white sand and turquoise water framed by limestone cliffs.','Pandawa Beach Kutuh Bali','photo-1507525428034-b723cf961d3e'],
- ['Tanjung Benoa','Adventure · Water Sports','Explore water activities including jet skiing, parasailing and banana boats.','Tanjung Benoa Bali','photo-1502680390469-be75c86b636f']
- ]
+const AREA = {canggu:{en:"Canggu",ru:"Чангу"}, jimbaran:{en:"Jimbaran",ru:"Джимбаран"}, nusadua:{en:"Nusa Dua",ru:"Нуса-Дуа"}};
+
+// Airport transfer — one way, per car (IDR)
+const TRANSFER = [
+  {group:{en:"Canggu area",ru:"Район Чангу"}, rows:[["Canggu",550000],["Pererenan",550000],["Seseh",550000],["Cemagi",550000],["Tanah Lot",600000]]},
+  {group:{en:"Jimbaran & Bukit",ru:"Джимбаран и Букит"}, rows:[["Jimbaran",400000],["Nusa Dua",450000],["Uluwatu",550000],["Pandawa",650000],["Melasti",650000],["Pecatu",650000],["Balangan",650000],["Bingin",650000],["Dreamland",650000]]}
+];
+// Motorbikes — per day (IDR)
+const BIKES = [
+  {id:"nmax", name:"Yamaha NMAX", cc:155, price:180000, img:"bike_nmax", tag:{en:"Spacious storage",ru:"Большой багажник"}},
+  {id:"adv", name:"Honda ADV", cc:160, price:195000, img:"bike_adv", tag:{en:"Adventure style",ru:"Для дальних поездок"}},
+  {id:"lexy", name:"Yamaha Lexy", cc:125, price:155000, img:"bike_lexy", tag:{en:"Spacious storage",ru:"Большой багажник"}},
+  {id:"fazzio", name:"Yamaha Fazzio", cc:125, price:135000, img:"bike_fazzio", tag:{en:"Stylish & compact",ru:"Стильный и лёгкий"}},
+  {id:"gear", name:"Yamaha Gear", cc:125, price:135000, img:"bike_gear", tag:{en:"Practical & comfy",ru:"Практичный"}},
+  {id:"ultima", name:"Yamaha Gear Ultima", cc:125, price:120000, img:"bike_ultima", tag:{en:"Modern & practical",ru:"Самый доступный"}}
+];
+// Private day tours — up to 4 guests / 12 hours (IDR per car)
+const TOURS = [
+  {id:"south", name:"South Bali", stops:"Uluwatu – Nusa Dua – Jimbaran", price:900000},
+  {id:"kuta", name:"Kuta City Tour", stops:"Kuta – Seminyak – Legian", price:900000},
+  {id:"ubud", name:"Ubud / Kintamani", stops:"Ubud – Tegalalang – Kintamani", price:1050000},
+  {id:"amed", name:"Amed / Karangasem", stops:"Amed – Tirta Gangga – Lempuyang", price:1200000},
+  {id:"lovina", name:"Bedugul / Lovina", stops:"Bedugul – Ulun Danu – Lovina", price:1200000}
+];
+// Spa at your villa — 60 minutes (IDR)
+const SPA = [
+  {grp:"massage", id:"balinese", ic:"lotus", name:{en:"Balinese Massage",ru:"Балийский массаж"}, price:350000},
+  {grp:"massage", id:"deep", ic:"hand", name:{en:"Deep Tissue Massage",ru:"Глубокий массаж"}, price:410000},
+  {grp:"massage", id:"medical", ic:"hands", name:{en:"Medical Massage",ru:"Лечебный массаж"}, price:410000},
+  {grp:"massage", id:"slim", ic:"drop", name:{en:"Slimming Massage",ru:"Массаж для похудения"}, price:400000},
+  {grp:"massage", id:"foot", ic:"foot", name:{en:"Foot Reflexology",ru:"Рефлексология стоп"}, price:300000},
+  {grp:"beauty", id:"facial", ic:"face", name:{en:"Facial",ru:"Уход за лицом"}, price:300000},
+  {grp:"beauty", id:"scrub", ic:"bowl", name:{en:"Body Scrub",ru:"Скраб для тела"}, price:300000},
+  {grp:"beauty", id:"nails", ic:"nail", name:{en:"Manicure / Pedicure",ru:"Маникюр / педикюр"}, price:300000},
+  {grp:"mind", id:"sound", ic:"sound", name:{en:"Sound Healing Therapy",ru:"Звукотерапия"}, price:400000},
+  {grp:"mind", id:"tarot", ic:"cards", name:{en:"Tarot Reading",ru:"Расклад таро"}, price:400000}
+];
+// Adventures (IDR)
+const ADV = [
+  {id:"atv", name:"ATV Ride", img:"adv_atv", desc:{en:"Jungle trails, rice fields and plenty of mud.",ru:"Джунгли, рисовые поля и много грязи."}, opts:[["1",950000,{en:"1 rider",ru:"1 человек"}],["2",1300000,{en:"2 on one ATV",ru:"2 на одном ATV"}]]},
+  {id:"utv", name:"UTV Buggy Adventure", img:"adv_utv", desc:{en:"Off-road buggy through the countryside.",ru:"Бездорожье на багги — драйв и виды."}, opts:[["1",1600000,{en:"1 rider",ru:"1 человек"}],["2",2000000,{en:"2 in one buggy",ru:"2 в одном багги"}]]},
+  {id:"raft", name:"River Rafting", img:"adv_raft", desc:{en:"White water through the jungle with a guide.",ru:"Сплав по горной реке с гидом."}, per:1100000},
+  {id:"tubing", name:"River Tubing", img:"adv_tubing", desc:{en:"Float, relax and enjoy the river.",ru:"Плывёшь по реке и отдыхаешь."}, per:800000}
+];
+// Price on request
+const MORE_ADV = [
+  {id:"phinisi", ic:"boat", name:{en:"Phinisi Dinner Cruise · Dance & DJ",ru:"Ужин на паруснике Phinisi · танцы и DJ"}},
+  {id:"penida", ic:"island", name:{en:"Nusa Penida Day Tour",ru:"Однодневный тур на Нуса-Пениду"}},
+  {id:"water", ic:"wave", name:{en:"Water sports · jet ski, parasailing, banana boat",ru:"Водные развлечения · гидроцикл, парасейлинг, банан"}}
+];
+const PLACES = {
+  canggu:[
+    ["La Brisa Bali",{en:"Beach club · Sunset",ru:"Бич-клуб · Закат"},{en:"A bohemian beachfront spot with ocean views and dreamy sunsets.",ru:"Богемный бич-клуб у океана и закаты как с открытки."},"La Brisa Bali Echo Beach Canggu"],
+    ["Batu Bolong Beach",{en:"Beach · Surf",ru:"Пляж · Сёрф"},{en:"Laid-back Canggu: watch the surfers and catch golden hour.",ru:"Расслабленный Чангу: сёрферы и золотой час."},"Batu Bolong Beach Canggu"],
+    ["FINNS Beach Club",{en:"Beach club · Pools",ru:"Бич-клуб · Бассейны"},{en:"Pools, beachfront dining and a lively crowd all day.",ru:"Бассейны, кухня у пляжа и движ весь день."},"FINNS Beach Club Berawa Bali"],
+    ["Tanah Lot Temple",{en:"Culture · Sunset",ru:"Культура · Закат"},{en:"Bali's iconic sea temple on a rock in the ocean.",ru:"Знаменитый храм на скале посреди океана."},"Tanah Lot Temple Tabanan Bali"],
+    ["Love Anchor Canggu",{en:"Market · Shopping",ru:"Маркет · Шопинг"},{en:"Bali-made fashion, accessories and souvenirs.",ru:"Местная одежда, аксессуары и сувениры."},"Love Anchor Canggu Bali"]
+  ],
+  jimbaran:[
+    ["Jimbaran Bay",{en:"Beach · Seafood",ru:"Пляж · Морепродукты"},{en:"Seafood dinner on the sand while the sun goes down.",ru:"Ужин из морепродуктов прямо на песке на закате."},"Jimbaran Bay Bali"],
+    ["Rock Bar Bali",{en:"Cliff bar · Sunset",ru:"Бар на скале · Закат"},{en:"Drinks on the rocks above the ocean at AYANA.",ru:"Коктейли на скале над океаном в AYANA."},"Rock Bar AYANA Jimbaran Bali"],
+    ["GWK Cultural Park",{en:"Culture · Landmark",ru:"Культура · Символ Бали"},{en:"The giant Garuda statue and traditional dance shows.",ru:"Гигантская статуя Гаруды и балийские танцы."},"Garuda Wisnu Kencana Cultural Park Bali"],
+    ["Samasta Lifestyle Village",{en:"Dining · Shopping",ru:"Еда · Шопинг"},{en:"Open-air restaurants, cafés and boutiques.",ru:"Рестораны, кафе и бутики под открытым небом."},"Samasta Lifestyle Village Jimbaran"],
+    ["Uluwatu Temple",{en:"Culture · Sunset",ru:"Культура · Закат"},{en:"Cliff-top temple and the Kecak fire dance at sunset.",ru:"Храм на обрыве и огненный танец Кечак на закате."},"Uluwatu Temple Pecatu Bali"]
+  ],
+  nusadua:[
+    ["Geger Beach",{en:"Beach · Calm water",ru:"Пляж · Спокойная вода"},{en:"Soft sand and turquoise water — made for a lazy day.",ru:"Мягкий песок и бирюзовая вода — для ленивого дня."},"Geger Beach Nusa Dua Bali"],
+    ["Water Blow",{en:"Nature · Viewpoint",ru:"Природа · Смотровая"},{en:"Ocean waves exploding through the rocks. Best at high tide.",ru:"Волны взрываются о скалы. Лучше в прилив."},"Water Blow Nusa Dua Bali"],
+    ["Bali Collection",{en:"Shopping · Dining",ru:"Шопинг · Еда"},{en:"Boutiques, restaurants and cafés in a tropical garden.",ru:"Бутики, рестораны и кафе в тропическом саду."},"Bali Collection Nusa Dua"],
+    ["Pandawa Beach",{en:"Beach · Short trip",ru:"Пляж · Недалеко"},{en:"White sand framed by limestone cliffs.",ru:"Белый песок между известняковых скал."},"Pandawa Beach Kutuh Bali"],
+    ["Tanjung Benoa",{en:"Water sports",ru:"Водные развлечения"},{en:"Jet ski, parasailing, banana boat — ask us to book.",ru:"Гидроцикл, парасейлинг, банан — забронируем."},"Tanjung Benoa Bali"]
+  ]
 };
-function renderPlaces(){
- const key=document.getElementById('villaSelect').value;
- const area=key==='lula'||key==='sacral'?'canggu':key==='victoria'||key==='victoria2'?'jimbaran':key==='e2'?'nusadua':null;
- const container=document.getElementById('placeCards');container.replaceChildren();
- document.getElementById('placeArea').textContent=area?({canggu:'Canggu favourites',jimbaran:'Jimbaran & South Bali',nusadua:'Nusa Dua favourites'}[area]):'Ask our team';
- if(!area){const msg=document.createElement('p');msg.className='empty-places';msg.textContent='Please select a villa to see local recommendations.';container.append(msg);return;}
- for(const [name,tag,desc,query] of places[area]){
- const article=document.createElement('article');article.className='place-row';
- const body=document.createElement('div');body.className='place-copy';
- const heading=document.createElement('h3');heading.textContent=name;
- const category=document.createElement('div');category.className='price';category.textContent=tag;
- const detail=document.createElement('p');detail.textContent=desc;
- const actions=document.createElement('div');actions.className='place-actions';
- const map=document.createElement('a');map.href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(query);map.target='_blank';map.rel='noopener noreferrer';map.textContent='↗ Get Directions';
- const ride=document.createElement('a');ride.className='secondary';ride.href=wa(guest,'Hi Brigita! I am staying at '+selected().name+' and would like to arrange a ride to '+name+'.');ride.target='_blank';ride.rel='noopener noreferrer';ride.textContent='Arrange a Ride ↗';
- actions.append(map,ride);body.append(heading,category,detail);article.append(body,actions);container.append(article);
+
+/* ============================================================
+   Text (EN / RU). Messages to the team stay in English.
+   ============================================================ */
+const T = {
+ en:{
+  heroK:"ByROOM · South Bali", heroH:"Welcome<br><em>home</em>", ctaExplore:"Explore services",
+  stayK:"You're staying at", concierge:"Concierge", conciergeS:"Brigita · WhatsApp", wifiS:"Tap for password",
+  needsK:"Concierge", needsH:"Everything for <em>your stay</em>", needsLede:"Grouped by what you need. Add anything you like — then send one request to our team on WhatsApp.",
+  services:"services", seeAll:"See all", infoK:"Good to know", infoH:"Handy <em>details</em>", teamK:"Here for you", teamH:"Your <em>team</em>",
+  gMove:"Arrival & getting around", gMoveS:"Airport transfer · scooters · day tours with a driver",
+  gSpa:"Spa at your villa", gSpaS:"Massage, beauty & wellbeing — the therapist comes to you",
+  gAdv:"Adventures", gAdvS:"ATV, buggy, rafting, cruises & islands",
+  gHome:"Home & help", gHomeS:"Housekeeping, laundry, longer stay",
+  exK:"Explore nearby", exH:"Around ", exSub:"Handpicked spots near your villa. Need a ride? Add it to your request.",
+  iWifi:"Wi-Fi & address", iWifiS:"Network, password, map", iHelp:"Emergency & useful", iHelpS:"112, hospital, pharmacy", iExtend:"Extend your stay", iExtendS:"Check dates and the best rate", iHk:"Housekeeping", iHkS:"Towels, amenities, cleaning",
+  fbBadH:"Something not right?", fbBadS:"Tell us first — we'll fix it fast.", fbGoodH:"Loving it? ★", fbGoodS:"Tell us — it makes our day.",
+  ftNote:"Service rates are starting prices, subject to availability and confirmation.",
+  copy:"Copy", copied:"Copied", directions:"Directions", ride:"Ride", network:"Network", password:"Password", openMaps:"Open in Maps", address:"Address", wifiAsk:"Wi-Fi details for this villa come from our team — one message and they're yours.", wifiBtn:"Get Wi-Fi details",
+  trNav:"Airport transfer", bkNav:"Scooters", toNav:"Day tours",
+  trSub:"Your driver meets you at Ngurah Rai arrivals with a name sign and helps with the luggage.", from:"from", perCar:"per car · one way", yours:"your villa",
+  trPerks:[["plane","Meet & greet at the airport"],["bag","Spacious, air-conditioned car"],["user","Experienced local driver"],["shield","Fixed price, no surprises"]],
+  trDir:[["arr","Arrival"],["dep","Departure"],["both","Both ways"]], date:"Date", time:"Time", flight:"Flight no.", guests:"Guests", addTransfer:"Add transfer", orSimilar:"or similar",
+  bkSub:"Well-maintained bikes, helmet included. For a day or your whole stay.", days:"Rental days", daysS:"prices update below", dayU:"day|days", perDay:"/ day",
+  bkPerks:[["helmet","Helmet included"],["tool","Well-maintained"],["clock","Flexible rental period"],["map","Explore Bali freely"]],
+  bkWarn:"Riding in Bali needs a motorcycle licence (an IDP with category A). Always wear your helmet — police check, and traffic is busy.",
+  toSub:"Private car with an experienced driver, up to 4 guests, 12 hours. Pick a route — the stops adapt to you.",
+  toPerks:[["car","Private car & driver"],["snow","Air-conditioned"],["route","Flexible itinerary"],["users","Up to 4 guests · 12 h"]],
+  spSub:"A professional therapist brings everything to your villa. All treatments are 60 minutes.", spMassage:"Massage", spBeauty:"Beauty", spMind:"Mind & soul",
+  spPerks:[["user","Professional therapists"],["leaf","Premium natural products"],["home","At your villa"],["clock","60 minutes each"]],
+  adSub:"Get out of the pool for a day. We book everything and can add a transfer.", adMain:"Ride & raft", adMore:"Cruises & islands", adMoreS:"Prices on request — we'll send options and times.", perPax:"per person", guestsU:"guest|guests", total:"Total", onReq:"on request",
+  hkNav:"Housekeeping", lnNav:"Laundry", exNav:"Longer stay",
+  hkSub:"Fresh towels, extra amenities or a clean-up — pick a time and we'll confirm on WhatsApp.", hkWhen:"When", hkTime:"Preferred time", hkNote:"Anything specific? (optional)", hkSend:"Send request",
+  hkDays:[["Today","Today (if available)"],["Tomorrow","Tomorrow"]], hkTimes:[["Morning","Morning (9–12)"],["Midday","Midday (12–3)"],["Afternoon","Afternoon (3–6)"],["Any time","Any time"]],
+  lnSub:"We pick up and bring it back fresh.", lnName:"Laundry service", exSub:"Not ready to leave? We'll check availability and the best rate.", exBtn:"Ask about extending",
+  helpSub:"Save this — just in case.", useful:[["phone","Emergency","Police · Ambulance · 112","tel:112"],["cross","Hospital","BIMC Hospital","https://www.google.com/maps/search/?api=1&query=BIMC%20Hospital%20Bali"],["pill","Pharmacy","Nearest to your villa","PHARM"],["pin","Villa location","Open in Maps","VMAP"]],
+  team:[["B","Brigita","Guest Relations",GUEST],["I","Ika","Property Manager",MANAGER]]
+ },
+ ru:{
+  heroK:"ByROOM · Юг Бали", heroH:"Добро<br><em>пожаловать</em>", ctaExplore:"Смотреть услуги",
+  stayK:"Вы живёте на вилле", concierge:"Консьерж", conciergeS:"Brigita · WhatsApp", wifiS:"Нажмите — пароль",
+  needsK:"Консьерж", needsH:"Всё для <em>вашего отдыха</em>", needsLede:"Собрали по потребностям. Добавляйте что нравится — и отправьте один запрос команде в WhatsApp.",
+  services:"услуг", seeAll:"Все", infoK:"Полезно знать", infoH:"Важные <em>детали</em>", teamK:"Мы рядом", teamH:"Ваша <em>команда</em>",
+  gMove:"Трансфер и передвижение", gMoveS:"Из аэропорта · скутеры · туры с водителем",
+  gSpa:"Спа на вилле", gSpaS:"Массаж, красота и релакс — мастер приедет к вам",
+  gAdv:"Приключения", gAdvS:"ATV, багги, рафтинг, круизы и острова",
+  gHome:"Дом и помощь", gHomeS:"Уборка, прачечная, продление",
+  exK:"Рядом с виллой", exH:"Вокруг: ", exSub:"Проверенные места рядом с виллой. Нужна машина? Добавьте поездку в запрос.",
+  iWifi:"Wi-Fi и адрес", iWifiS:"Сеть, пароль, карта", iHelp:"Экстренное и важное", iHelpS:"112, больница, аптека", iExtend:"Продлить проживание", iExtendS:"Проверим даты и лучшую цену", iHk:"Уборка", iHkS:"Полотенца, принадлежности, уборка",
+  fbBadH:"Что-то не так?", fbBadS:"Напишите нам — быстро исправим.", fbGoodH:"Всё нравится? ★", fbGoodS:"Расскажите — это лучший день для команды.",
+  ftNote:"Цены услуг — стартовые, зависят от наличия и подтверждения.",
+  copy:"Копировать", copied:"Скопировано", directions:"Маршрут", ride:"Поездка", network:"Сеть", password:"Пароль", openMaps:"Открыть карту", address:"Адрес", wifiAsk:"Wi-Fi этой виллы пришлёт команда — одно сообщение, и всё.", wifiBtn:"Получить Wi-Fi",
+  trNav:"Трансфер", bkNav:"Скутеры", toNav:"Туры",
+  trSub:"Водитель встретит в зоне прилёта Нгурах-Рай с табличкой и поможет с багажом.", from:"от", perCar:"за машину · в одну сторону", yours:"ваша вилла",
+  trPerks:[["plane","Встреча в аэропорту"],["bag","Просторная машина с кондиционером"],["user","Опытный местный водитель"],["shield","Фиксированная цена"]],
+  trDir:[["arr","Прилёт"],["dep","Вылет"],["both","Туда-обратно"]], date:"Дата", time:"Время", flight:"Рейс", guests:"Гостей", addTransfer:"Добавить трансфер", orSimilar:"или аналог",
+  bkSub:"Обслуженные байки, шлем в комплекте. На день или на весь отдых.", days:"Дней аренды", daysS:"цены пересчитаются ниже", dayU:"день|дн.", perDay:"/ день",
+  bkPerks:[["helmet","Шлем в комплекте"],["tool","Обслуженные байки"],["clock","Гибкий срок"],["map","Свобода передвижения"]],
+  bkWarn:"Для езды на Бали нужны права категории A (международное удостоверение). Всегда надевайте шлем — полиция проверяет, а движение плотное.",
+  toSub:"Своя машина и опытный водитель, до 4 гостей, 12 часов. Выберите маршрут — остановки подстроим.",
+  toPerks:[["car","Машина с водителем"],["snow","Кондиционер"],["route","Гибкий маршрут"],["users","До 4 гостей · 12 ч"]],
+  spSub:"Мастер привезёт всё необходимое на виллу. Каждая процедура — 60 минут.", spMassage:"Массаж", spBeauty:"Красота", spMind:"Для души",
+  spPerks:[["user","Профессиональные мастера"],["leaf","Натуральная косметика"],["home","У вас на вилле"],["clock","По 60 минут"]],
+  adSub:"Выберитесь из бассейна на денёк. Забронируем всё и при желании трансфер.", adMain:"Драйв и сплав", adMore:"Круизы и острова", adMoreS:"Цена по запросу — пришлём варианты и время.", perPax:"за человека", guestsU:"гость|гостей", total:"Итого", onReq:"по запросу",
+  hkNav:"Уборка", lnNav:"Прачечная", exNav:"Продление",
+  hkSub:"Свежие полотенца, принадлежности или уборка — выберите время, подтвердим в WhatsApp.", hkWhen:"Когда", hkTime:"Удобное время", hkNote:"Пожелания (необязательно)", hkSend:"Отправить запрос",
+  hkDays:[["Сегодня","Today (if available)"],["Завтра","Tomorrow"]], hkTimes:[["Утро","Morning (9–12)"],["День","Midday (12–3)"],["Вечер","Afternoon (3–6)"],["Любое","Any time"]],
+  lnSub:"Заберём и вернём свежим.", lnName:"Прачечная", exSub:"Не хочется уезжать? Проверим даты и лучшую цену.", exBtn:"Спросить про продление",
+  helpSub:"Сохраните на всякий случай.", useful:[["phone","Экстренно","Полиция · Скорая · 112","tel:112"],["cross","Больница","BIMC Hospital","https://www.google.com/maps/search/?api=1&query=BIMC%20Hospital%20Bali"],["pill","Аптека","Ближайшая к вилле","PHARM"],["pin","Вилла на карте","Открыть карту","VMAP"]],
+  team:[["B","Brigita","Гостевой сервис",GUEST],["I","Ika","Управляющая",MANAGER]],
+  kAdd:"Добавить", kAdded:"Добавлено", kMyReq:"Мой запрос", kChat:"Написать нам", kSheetT:"Ваш запрос", kSheetSub:"Проверьте список, добавьте детали и отправьте команде одним сообщением в WhatsApp.",
+  kName:"Ваше имя", kNote:"Что-то ещё?", kNoteP:"Даты, время, сколько гостей…", kTotal:"Ориентировочно", kTotalNote:"Итоговую цену подтвердит команда", kSend:"Отправить в WhatsApp",
+  kEmpty:"Список пуст — нажмите «Добавить» у любой услуги.", kSent:"Открываем WhatsApp…", kRemoved:"Убрано", kAddedT:"Добавлено в запрос", kOnReq:"по запросу"
  }
+};
+const WA_EN = { hi:"Hi Brigita! I'm staying at {v}.", help:"Hi Brigita! I'm staying at {v}. Could you help me?", wifi:"Hi Brigita! I'm staying at {v}. Could you send me the Wi-Fi details?",
+  hk:"Hi Brigita! I'm staying at {v}. Could you arrange housekeeping?", ext:"Hi Brigita! I'm staying at {v} and would like to extend my stay. Could you check availability and rates?",
+  bad:"Hi Brigita, I'm staying at {v} and something needs attention: ", good:"Hi Brigita! I'm staying at {v} and want to share some feedback: " };
+
+/* ============================================================
+   App
+   ============================================================ */
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const {esc, ic, h} = Guide; const fmt = Kit.fmt;
+let lang = "en";
+try { lang = localStorage.getItem("sbLang") || ((navigator.language || "").toLowerCase().startsWith("ru") ? "ru" : "en"); } catch(e){}
+let vKey = "lula";
+const qv = new URLSearchParams(location.search).get("villa");
+try { vKey = (qv && VILLAS[qv]) ? qv : (localStorage.getItem("sbVilla") || "lula"); } catch(e){ if (qv && VILLAS[qv]) vKey = qv; }
+if (!VILLAS[vKey]) vKey = "lula";
+const V = () => VILLAS[vKey];
+const L = k => (T[lang] && T[lang][k] != null) ? T[lang][k] : T.en[k];
+const tr = v => (v && typeof v === "object" && !Array.isArray(v)) ? (v[lang] || v.en) : v;
+const wa = (phone, msg) => Kit.wa(phone, msg);
+const waV = k => wa(GUEST, WA_EN[k].replace(/\{v\}/g, V().name));
+const unit = (n, u) => { const p = String(u).split("|"); return `${n} ${n === 1 ? p[0] : p[1]}`; };
+const S = {trDir:"arr", trDest:null, days:3, hkDay:1, hkTime:0, atv:"1", utv:"1", g_raft:2, g_tubing:2};
+const destPrice = d => { let p = 0; TRANSFER.forEach(g => g.rows.forEach(r => { if (r[0] === d) p = r[1]; })); return p; };
+const form = {};  // remembers inputs between repaints
+document.addEventListener("input", e => { if (e.target.id) form[e.target.id] = e.target.value; }, true);
+
+/* ---------- basket items (messages in English) ---------- */
+Kit.item("transfer", () => {
+  const dest = S.trDest || V().dest;
+  const bits = [{arr:"Airport → villa", dep:"Villa → airport", both:"Both ways"}[S.trDir]];
+  const d = form.trDate || "", tm = form.trTime || "", fl = (form.trFlight || "").trim(), px = form.trPax || "";
+  if (d || tm) bits.push([d, tm].filter(Boolean).join(" ")); if (fl) bits.push("flight " + fl); if (px) bits.push(px + " pax");
+  return {t:`Airport transfer · ${dest}`, m:bits.join(" · "), amt:destPrice(dest) * (S.trDir === "both" ? 2 : 1)};
+});
+BIKES.forEach(b => Kit.item("bike-" + b.id, () => ({t:`${b.name} ${b.cc}cc`, m:`${S.days} day${S.days > 1 ? "s" : ""} · helmet included`, amt:b.price * S.days})));
+TOURS.forEach(r => Kit.item("tour-" + r.id, () => ({t:`Day tour · ${r.name}`, m:`${r.stops} · up to 4 guests · 12 h`, amt:r.price})));
+SPA.forEach(s => Kit.item("spa-" + s.id, () => ({t:s.name.en, m:"60 min at the villa", amt:s.price})));
+ADV.forEach(a => Kit.item("adv-" + a.id, () => {
+  if (a.opts){ const o = a.opts.find(o => o[0] === S[a.id]) || a.opts[0]; return {t:a.name, m:o[2].en, amt:o[1]}; }
+  const n = S["g_" + a.id]; return {t:a.name, m:`${n} guest${n > 1 ? "s" : ""}`, amt:a.per * n};
+}));
+MORE_ADV.forEach(m => Kit.item("more-" + m.id, () => ({t:m.name.en, amt:null})));
+Kit.item("laundry", () => ({t:"Laundry service", amt:null, lbl:"from IDR 30,000"}));
+Object.values(PLACES).flat().forEach(p => Kit.item("ride-" + p[0], () => ({t:`Ride to ${p[0]}`, m:"from " + V().name, amt:null})));
+
+/* ---------- views ---------- */
+Guide.views.move = {
+  get title(){ return L("gMove"); }, get kicker(){ return "ByROOM · " + tr(AREA[V().area]); }, get sub(){ return L("gMoveS"); }, img:"assets/svc/tour_temple.webp",
+  get nav(){ return [["transfer", L("trNav")], ["bikes", L("bkNav")], ["tours", L("toNav")]]; },
+  body(){
+    const v = V(); if (!S.trDest) S.trDest = v.dest;
+    const rows = TRANSFER.map(g => `<div class="grp">${esc(tr(g.group))}</div>${g.rows.map(([n, p]) => `
+      <div class="rr pick ${n === S.trDest ? "sel" : ""}" data-dest="${esc(n)}" role="radio" aria-checked="${n === S.trDest}" tabindex="0">
+        <div class="rr-ic">${n === S.trDest ? ic("check") : ""}</div><div class="rr-b"><div class="rr-t">${esc(n)}${n === v.dest ? `<span class="mine">${esc(L("yours"))}</span>` : ""}</div></div><div class="rr-p">${fmt(p)}</div></div>`).join("")}`).join("");
+    return h.sec("transfer", L("trNav"), L("trSub"), `
+        <div class="card"><div class="price-b"><span>${esc(L("from"))}</span><b>IDR 400,000</b><span>${esc(L("perCar"))}</span></div>
+          <div class="route"><div class="pt">${ic("plane")}Ngurah Rai<br>Airport</div><div class="ln"></div><div class="pt">${ic("home")}${esc(v.name)}</div></div></div>
+        ${h.perks(L("trPerks"))}
+        <div class="rows" style="margin-top:10px">${rows}</div>
+        <div class="card">${h.seg("trDir", L("trDir"), S.trDir)}
+          <div class="k-fields">
+            <label>${esc(L("date"))}<input class="k-in" type="date" id="trDate" value="${esc(form.trDate || "")}"></label>
+            <label>${esc(L("time"))}<input class="k-in" type="time" id="trTime" value="${esc(form.trTime || "")}"></label>
+            <label>${esc(L("flight"))}<input class="k-in" id="trFlight" placeholder="QZ 501" value="${esc(form.trFlight || "")}"></label>
+            <label>${esc(L("guests"))}<input class="k-in" type="number" min="1" max="12" inputmode="numeric" id="trPax" value="${esc(form.trPax || "2")}"></label></div>
+          ${h.total("transfer", "")}${h.add("transfer", "big", L("addTransfer"))}</div>
+        ${h.cars([["assets/svc/car_innova.webp","Toyota Innova",L("orSimilar")],["assets/svc/car_xenia.webp","Daihatsu Xenia",L("orSimilar")]])}`)
+      + h.sec("bikes", L("bkNav"), L("bkSub"), `
+        <div class="card">${h.step("days", S.days, 1, 30, L("dayU"), L("days"), L("daysS"))}</div>
+        ${h.prods(BIKES.map(b => ({id:"bike-" + b.id, img:`assets/svc/${b.img}.webp`, tag:`${b.cc} CC`, name:b.name, meta:tr(b.tag), price:fmt(b.price), unit:L("perDay"), totId:b.id})))}
+        ${h.perks(L("bkPerks"))}${h.warn(L("bkWarn"))}`)
+      + h.sec("tours", L("toNav"), L("toSub"), `
+        ${h.rows(TOURS.map(r => ({id:"tour-" + r.id, icon:"route", name:r.name, meta:r.stops, price:fmt(r.price)})))}
+        ${h.perks(L("toPerks"))}
+        <figure class="photo"><img src="assets/svc/tour_cars.webp" alt="Toyota Avanza and Innova Reborn" loading="lazy"><figcaption>Toyota Avanza · Innova Reborn — ${esc(L("orSimilar"))}</figcaption></figure>`);
+  }
+};
+Guide.views.spa = {
+  get title(){ return L("gSpa"); }, kicker:"Spa & wellness", get sub(){ return L("gSpaS"); }, img:"assets/svc/spa_massage.webp",
+  get nav(){ return [["massage", L("spMassage")], ["beauty", L("spBeauty")], ["mind", L("spMind")]]; },
+  body(){
+    const sec = (g, title, top) => h.sec(g, title, top ? L("spSub") : "", (top ? h.perks(L("spPerks")) + '<div style="height:10px"></div>' : "") +
+      h.rows(SPA.filter(s => s.grp === g).map(s => ({id:"spa-" + s.id, icon:s.ic, name:tr(s.name), meta:"60 min", price:fmt(s.price)}))));
+    return sec("massage", L("spMassage"), true) + sec("beauty", L("spBeauty")) + sec("mind", L("spMind"));
+  }
+};
+Guide.views.adv = {
+  get title(){ return L("gAdv"); }, kicker:"Bali adventures", get sub(){ return L("gAdvS"); }, img:"assets/svc/adv_raft.webp",
+  get nav(){ return [["ride", L("adMain")], ["cruise", L("adMore")]]; },
+  body(){
+    return h.sec("ride", L("adMain"), L("adSub"), h.prods(ADV.map(a => ({
+        id:"adv-" + a.id, img:`assets/svc/${a.img}.webp`, cover:true, name:a.name, meta:tr(a.desc),
+        extra: a.opts ? `<div class="durs" data-group="${a.id}">${a.opts.map(o => `<button type="button" data-v="${o[0]}" class="${S[a.id] === o[0] ? "on" : ""}">${esc(tr(o[2]))} · ${fmt(o[1])}</button>`).join("")}</div>${h.total("adv-" + a.id, L("total"))}`
+          : `<div style="margin-top:8px">${h.step("g_" + a.id, S["g_" + a.id], 1, 12, L("guestsU"), fmt(a.per), L("perPax"))}</div>${h.total("adv-" + a.id, L("total"))}`
+      })), true))
+      + h.sec("cruise", L("adMore"), L("adMoreS"), h.rows(MORE_ADV.map(m => ({id:"more-" + m.id, icon:m.ic, name:tr(m.name), meta:L("onReq")}))));
+  }
+};
+Guide.views.home = {
+  get title(){ return L("gHome"); }, get kicker(){ return V().name; }, get sub(){ return L("gHomeS"); }, get img(){ return V().photo; },
+  get nav(){ return [["hk", L("hkNav")], ["laundry", L("lnNav")], ["extend", L("exNav")]]; },
+  body(){
+    return h.sec("hk", L("hkNav"), L("hkSub"), `<div class="card">
+        <div class="k-fields" style="margin-top:0"><label class="full">${esc(L("hkWhen"))}${h.seg("hkDay", L("hkDays").map((d, i) => [i, d[0]]), S.hkDay)}</label>
+        <label class="full">${esc(L("hkTime"))}${h.seg("hkTime", L("hkTimes").map((d, i) => [i, d[0]]), S.hkTime)}</label>
+        <label class="full">${esc(L("hkNote"))}<textarea class="k-in" id="hkNote" rows="2">${esc(form.hkNote || "")}</textarea></label></div>
+        <button type="button" class="add big" id="hkSend" style="margin-top:14px">${ic("chat")} ${esc(L("hkSend"))}</button></div>`)
+      + h.sec("laundry", L("lnNav"), L("lnSub"), h.rows([{id:"laundry", icon:"shirt", name:L("lnName"), meta:"from IDR 30,000"}]))
+      + h.sec("extend", L("exNav"), L("exSub"), `<a class="lbtn dark w" style="min-height:52px" target="_blank" rel="noopener" href="${waV("ext")}">${ic("calendar")} ${esc(L("exBtn"))}</a>`);
+  },
+  after(){ const b = $("#hkSend"); if (b) b.onclick = () => {
+    const d = L("hkDays")[S.hkDay], t = L("hkTimes")[S.hkTime], note = (form.hkNote || "").trim();
+    let msg = `${WA_EN.hk.replace("{v}", V().name)}\n• When: ${d[1]}\n• Time: ${t[1]}`; if (note) msg += `\n• Note: ${note}`;
+    window.open(wa(GUEST, msg), "_blank"); }; }
+};
+Guide.views.stay = {
+  get title(){ return V().name; }, get kicker(){ return L("stayK"); }, get sub(){ return V().address; }, get img(){ return V().photo; },
+  body(){
+    const v = V();
+    const wifi = v.wifi ? h.wifi([{l:L("network"), v:v.wifi}, {l:L("password"), v:v.pass, mask:true}], L)
+      : `<div class="card"><p class="note" style="margin:0 0 12px">${esc(L("wifiAsk"))}</p><a class="lbtn dark w" target="_blank" rel="noopener" href="${waV("wifi")}">${ic("wifi")} ${esc(L("wifiBtn"))}</a></div>`;
+    return h.sec("wifi", "Wi-Fi", "", wifi) + h.sec("addr", L("address"), v.address, `<a class="lbtn dark w" style="min-height:52px" href="${v.map}" target="_blank" rel="noopener">${ic("pin")} ${esc(L("openMaps"))}</a>`);
+  }
+};
+Guide.views.explore = {
+  get title(){ return L("exH") + tr(AREA[V().area]); }, get kicker(){ return L("exK"); }, get sub(){ return L("exSub"); }, img:"assets/svc/tour_temple.webp",
+  body(){ return h.sec("places", tr(AREA[V().area]), "", h.places(PLACES[V().area].map(([n, tag, d, q]) => ({name:n, dist:tr(tag), note:tr(d), maps:"https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(q), addId:"ride-" + n, addLabel:L("ride")})), L)); }
+};
+Guide.views.help = {
+  get title(){ return L("iHelp"); }, kicker:"Help", get sub(){ return L("helpSub"); }, img:"assets/svc/spa_still.webp",
+  body(){ const v = V(); return h.sec("useful", L("iHelp"), "", `<div class="ilist">${L("useful").map(([k, t, m, href]) => {
+      const u = href === "VMAP" ? v.map : href === "PHARM" ? "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("pharmacy near " + v.address) : href;
+      return `<a class="irow" href="${u}" ${u.startsWith("http") ? 'target="_blank" rel="noopener"' : ""}><span class="ic">${ic(k)}</span><span class="b"><span class="t">${esc(t)}</span><br><span class="m">${esc(m)}</span></span><span class="ch">${ic("chev")}</span></a>`; }).join("")}</div>`); }
+};
+
+/* ---------- home ---------- */
+function renderHome(){
+  const v = V();
+  document.documentElement.lang = lang;
+  $$("[data-i]").forEach(el => el.textContent = L(el.dataset.i));
+  $$("[data-ih]").forEach(el => el.innerHTML = L(el.dataset.ih));
+  $("#langs").innerHTML = [["en","EN"],["ru","RU"]].map(([c, l]) => `<button type="button" data-lang="${c}" class="${c === lang ? "on" : ""}">${l}</button>`).join("");
+  $("#heroSub").textContent = `${v.name} · ${tr(AREA[v.area])}`;
+  $("#stayCard").innerHTML = `
+    <div class="stay-h"><div class="stay-ph" style="background-image:url('${v.photo}')"></div>
+      <div class="b"><div class="k">${esc(L("stayK"))}</div><div class="n">${esc(v.name)}</div><div class="a">${esc(v.address)}</div></div>
+      <a class="iconbtn" href="${v.map}" target="_blank" rel="noopener" aria-label="${esc(L("openMaps"))}">${ic("pin")}</a></div>
+    <div class="villas">${Object.entries(VILLAS).map(([k, x]) => `<button type="button" data-villa="${k}" class="${k === vKey ? "on" : ""}">${esc(x.name)}</button>`).join("")}</div>
+    <div class="stay-g">
+      <button type="button" data-view="stay"><span class="l">${ic("wifi")}Wi-Fi</span><span class="v">${esc(v.wifi || L("wifiBtn"))}</span><span class="s">${esc(L("wifiS"))}</span></button>
+      <a href="${waV("help")}" target="_blank" rel="noopener"><span class="l">${ic("chat")}${esc(L("concierge"))}</span><span class="v">24/7</span><span class="s">${esc(L("conciergeS"))}</span></a></div>`;
+  const tiles = [
+    ["move", "gMove", "gMoveS", "assets/svc/tour_temple.webp", 3, true],
+    ["spa", "gSpa", "gSpaS", "assets/svc/spa_massage.webp", SPA.length],
+    ["adv", "gAdv", "gAdvS", "assets/svc/adv_raft.webp", ADV.length + MORE_ADV.length],
+    ["home", "gHome", "gHomeS", v.photo, 3, "wide"]
+  ];
+  $("#bento").innerHTML = tiles.map(([id, t, s, img, n, big]) => `
+    <button type="button" class="tile rv ${big === true ? "big" : big || ""}" data-view="${id}" style="background-image:url('${img}')"><span class="bg"></span>
+      <span class="go">${ic("arrow")}</span><span class="in"><span class="c">${n} ${esc(L("services"))}</span><h3>${esc(L(t))}</h3><p>${esc(L(s))}</p></span></button>`).join("");
+  $("#exK").textContent = L("exK"); $("#exH").innerHTML = `${esc(L("exH"))}<em>${esc(tr(AREA[v.area]))}</em>`;
+  $("#rail").innerHTML = PLACES[v.area].map(([n, tag, d], i) => `
+    <button type="button" class="pcard" data-view="explore"><div class="ph txt"><span class="tag">${esc(tr(tag))}</span>0${i + 1}</div><div class="b"><div class="t">${esc(n)}</div><div class="m">${esc(tr(d))}</div></div></button>`).join("");
+  $("#infoList").innerHTML = [["wifi","iWifi","iWifiS","stay"],["home","iHk","iHkS","home"],["calendar","iExtend","iExtendS","home","extend"],["phone","iHelp","iHelpS","help"]]
+    .map(([k, t, s, view, sub]) => `<button type="button" class="irow" data-view="${view}" ${sub ? `data-sub="${sub}"` : ""}><span class="ic">${ic(k)}</span><span class="b"><span class="t">${esc(L(t))}</span><br><span class="m">${esc(L(s))}</span></span><span class="ch">${ic("chev")}</span></button>`).join("");
+  $("#teamList").innerHTML = L("team").map(([a, n, r, ph]) => `
+    <a class="person" target="_blank" rel="noopener" href="${wa(ph, WA_EN.hi.replace("Brigita", n).replace("{v}", v.name))}"><div class="av">${a}</div><div class="b"><div class="n">${n}</div><div class="r">${esc(r)}</div></div><span class="pill-wa">${Kit.icon.wa.replace('width="20" height="20"', "")} WhatsApp</span></a>`).join("");
+  $("#fbBad").href = waV("bad"); $("#fbGood").href = waV("good");
+  Kit.relabel(); Guide.reveal();
 }
-const initialVilla=new URLSearchParams(window.location.search).get('villa');
-if(initialVilla && Object.prototype.hasOwnProperty.call(villas,initialVilla)){document.getElementById('villaSelect').value=initialVilla;}
-renderVilla();
-</script></body></html>
+function dyn(){
+  $$(".k-step").forEach(w => Kit.setStep(w, +w.dataset.val));
+  BIKES.forEach(b => { const el = document.querySelector(`[data-tot="${b.id}"]`); if (el) el.textContent = S.days > 1 ? `${unit(S.days, L("dayU"))} · ${fmt(b.price * S.days)}` : ""; });
+  const sum = document.querySelector('[data-sum="transfer"]'); if (sum) sum.textContent = `${(L("trDir").find(d => d[0] === S.trDir) || [])[1]} · ${S.trDest || V().dest}`;
+  Kit.updatePrices(); Kit.sync();
+}
+
+/* ---------- events ---------- */
+document.addEventListener("click", e => {
+  const lb = e.target.closest("#langs button");
+  if (lb){ lang = lb.dataset.lang; try { localStorage.setItem("sbLang", lang); } catch(_){} renderHome(); Guide.repaint(); dyn(); return; }
+  const vb = e.target.closest("[data-villa]");
+  if (vb){ vKey = vb.dataset.villa; S.trDest = null; try { localStorage.setItem("sbVilla", vKey); history.replaceState(null, "", "?villa=" + vKey + location.hash); } catch(_){} renderHome(); Kit.refreshAll(); return; }
+  const row = e.target.closest(".rr.pick[data-dest]");
+  if (row){ S.trDest = row.dataset.dest; Guide.repaint(); return; }
+});
+document.addEventListener("keydown", e => { const r = e.target.closest && e.target.closest(".rr.pick"); if (r && (e.key === "Enter" || e.key === " ")){ e.preventDefault(); r.click(); } });
+document.addEventListener("kpick", e => { const {group, value} = e.detail; if (group === "hkDay" || group === "hkTime") S[group] = +value; else S[group] = value; dyn(); });
+document.addEventListener("kstep", e => { S[e.detail.name] = e.detail.value; dyn(); });
+document.addEventListener("input", e => { if (/^tr/.test(e.target.id)) dyn(); });
+
+/* ---------- boot ---------- */
+Kit.init({ L:k => (T[lang] && T[lang][k]) || k, phone:GUEST, villa:() => V().name, chatHref:() => waV("help"), roomField:false });
+Guide.setup({ L, afterRender:dyn });
+Kit.mountDock();
+renderHome();
+Guide.mount();
+Guide.hero($("#top"), { wide:{src:"assets/video/sb_wide.mp4", poster:"assets/video/sb_wide.jpg"}, mobile:{src:"assets/video/sb_m.mp4", poster:"assets/video/sb_m.jpg"} });
+dyn();
+</script>
+</body>
+</html>
